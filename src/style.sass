@@ -1,0 +1,74 @@
+@import "./sass/_settings"
+
+body
+  font-weight: 400
+  overflow: hidden
+
+// Header section
+.header
+  position: relative
+  &_line
+    position: absolute
+    top: 68px
+    left: -78px
+    display: block
+    border-radius: 30px
+    height: 30px
+    width: 14px
+    background-color: rgba($gray, 0.2)
+.nav
+  &-list
+    display: flex
+  &__item
+    list-style: none
+    display: flex
+    align-items: center
+  &__item:not(:last-child)
+    margin-right: 40px
+    &::after
+      content: ''
+      display: block
+      height: 26px
+      width: 2px
+      background-color: rgba($gray, 0.3)
+      margin-left: 40px
+  &__link
+    text-decoration: none
+    width: 202px
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 10px 10px 15px rgba($gray, 0.2)
+    border-radius: 60px
+    font-size: 16px
+    color: $gray
+.calendar
+  &-widget
+    width: 294px
+    height: 174px
+    border-bottom-left-radius: 12px
+    border-bottom-right-radius: 12px
+    background-color: rgba($gray, 0.2)
+    padding: 59px 40px 26px 51px
+  &-image
+    height: 32px
+    width: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $white
+    border-radius: 32px
+    &__icon
+      width: 18px
+  &__title
+    margin-left: 15px
+    +bold()
+    color: $gray
+    font-size: 16px
+  &__desc
+    font-size: 20px
+    color: $white
+    margin-top: 15px
+    span
+      +bold()
