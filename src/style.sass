@@ -2,7 +2,8 @@
 
 body
   font-weight: 400
-  overflow: hidden
+  overflow-x: hidden
+  height: 6000px
 
 // Header section
 .header
@@ -72,3 +73,71 @@ body
     margin-top: 15px
     span
       +bold()
+
+// Home section
+.home
+  &__title
+    margin-top: 13px
+    margin-left: -12px
+    margin-bottom: 45px
+.section-title
+  font-size: 159px
+  width: 160%
+  color: rgba($gray, 0.2)
+.arrow-circle
+  height: 46px
+  width: 46px
+  background-color: $black
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  img
+    width: 11px
+.circles
+  display: flex
+  &__block
+    margin-left: 50px
+  &__item
+    height: 14px
+    width: 14px
+    background-color: rgba($gray, 0.2)
+    border-radius: 50%
+  &__item:not(:last-child)
+    margin-right: 20px
+.blockquote
+  &__text
+    width: 314px
+    margin-top: 30px
+.section-subtitle
+  font-size: 20px
+  +regular()
+.dividends
+  &__content
+    margin-left: 160px
+    margin-top: 7px
+  &-block
+    display: flex
+    align-items: center
+    &::before
+      content: ''
+      display: inline-block
+      height: 88px
+      width: 3px
+      background-color: rgba($gray, 0.3)
+      margin-right: 42px
+  &__text
+    width: 140px
+  &__link
+    margin-top: 40px
+    width: 187px
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    color: $white
+    font-size: 20px
+    +regular()
+    background: linear-gradient(90deg, $orangeLight, $orangeDark)
+    border-radius: 187px
