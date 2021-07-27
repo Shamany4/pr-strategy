@@ -111,7 +111,8 @@ body
     margin-top: 30px
 .section-subtitle
   font-size: 20px
-  +regular()
+  +book()
+  line-height: 24px
 .dividends
   &__content
     margin-left: 160px
@@ -129,7 +130,7 @@ body
   &__text
     width: 140px
   &__link
-    margin-top: 40px
+    margin-top: 37px
     width: 187px
     height: 60px
     display: flex
@@ -138,6 +139,69 @@ body
     text-decoration: none
     color: $white
     font-size: 20px
-    +regular()
+    +book()
     background: linear-gradient(90deg, $orangeLight, $orangeDark)
     border-radius: 187px
+
+// Experinece section
+.experience
+  height: 383px
+  background-color: #EBEBEB
+  position: relative
+  &_rectangle
+    position: absolute
+    bottom: -151px
+    right: -35px
+    height: 300px
+    width: 109%
+    background-color: #000000
+    transform: rotate(-8deg)
+    z-index: 0
+  &__content
+    position: relative
+  &__title
+    position: absolute
+    top: -112px
+    left: -14px
+  &__title
+    font-size: 143px
+    color: $black
+    z-index: 2
+  &__section
+    margin-top: 189px
+  &__text
+    width: 313px
+    margin-top: 97px
+  &-card
+    width: 417px
+    height: 520px
+    background-color: $white
+    border-radius: 44px
+    box-shadow: 10px 10px 15px rgba($gray, 0.2)
+    z-index: 1
+    margin-top: -110px
+    margin-left: 101px
+    padding: 207px 48px 10px 113px
+    position: relative
+    &__title
+      margin-top: 25px
+      font-size: 20px
+    &_circle
+      position: absolute
+      bottom: 27px
+      right: 32px
+  &-warning
+    position: absolute
+    top: 188px
+    left: -40.5px
+    height: 81px
+    width: 81px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    background: linear-gradient(87deg, $orangeLight, $orangeDark)
+    span
+      +bold()
+      color: $white
+      font-size: 30px
