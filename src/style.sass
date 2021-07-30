@@ -205,3 +205,90 @@ body
       +bold()
       color: $white
       font-size: 30px
+
+// Stage section
+.stage
+  background-color: $black
+  &__section
+    position: absolute
+    width: 100%
+    height: 700px
+    z-index: 0
+  &__content
+    margin-top: 107px
+  &-progress
+    display: block
+    height: 467px
+    width: 5px
+    background-color: rgba($white, 0.3)
+    position: relative
+    margin-top: 33px
+    &__thumb
+      position: absolute
+      top: 0
+      left: -2px
+      height: 125px
+      width: 10px
+      border-radius: 10px
+      background: linear-gradient(90deg, $orangeLight, $orangeDark)
+.step
+  z-index: 2
+  color: $white
+  &__block:last-child
+    margin-top: 74px
+  &__count
+    font-size: 143px
+    +bold()
+    width: 175px
+  &-description
+    margin-left: 33px
+    margin-top: 28px
+  &__title, &__subtitle
+    font-size: 20px
+    +bold()
+  &__text
+    margin-top: 42px
+  &__title:first-child
+    display: flex
+    align-items: flex-end
+    margin-right: 27px
+    &::after
+      content: ''
+      display: block
+      height: 1px
+      margin-bottom: 5px
+      width: 113px
+      margin-left: 25px
+      background-color: $white
+
+.step:last-child .step__title
+  &::after
+    width: 61px
+.step:first-child .step__text
+  width: 257px
+.step:last-child .step__text
+  width: 301px
+
+.step_right:first-child .step__title
+  margin-right: 29px
+  &::after
+    width: 97px
+.step_right:first-child .step__text
+  width: 193px
+.step_right:first-child .step-description
+  margin-left: 41px
+
+.step_right:last-child
+  margin-top: 95px
+.step_right:last-child .step__title
+  margin-right: 10px
+  &::after
+    width: 19px
+    margin-left: 9px
+.step_right:last-child .step__text
+  width: 270px
+  margin-top: 28px
+.step_right:last-child .step-description
+  margin-left: 46px
+.step_right:last-child .step__count
+  margin-top: 3px
