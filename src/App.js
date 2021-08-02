@@ -4,6 +4,8 @@ import Header from './components/Header';
 import HomeSection from './sections/HomeSection';
 import ExperienceSection from './sections/ExperienceSection';
 import StageSection from './sections/StageSection';
+import FeedbackSection from './sections/FeedbackSection';
+import AboutSection from './sections/AboutSection';
 
 function App() {
   return (
@@ -16,6 +18,10 @@ function App() {
       <ExperienceSection />
 
       <StageSection />
+
+      <FeedbackSection />
+
+      <AboutSection />
 
     </div>
   );
