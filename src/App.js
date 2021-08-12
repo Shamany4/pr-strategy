@@ -6,6 +6,7 @@ import ExperienceSection from './sections/ExperienceSection';
 import StageSection from './sections/StageSection';
 import FeedbackSection from './sections/FeedbackSection';
 import AboutSection from './sections/AboutSection';
+import PersonSection from './sections/PersonSection';
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
 
       <FeedbackSection />
 
-      <AboutSection />
+      <div className="section-bg">
+        <AboutSection />
+        <PersonSection />
+      </div>
 
     </div>
   );
