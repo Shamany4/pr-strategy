@@ -7,6 +7,7 @@ import StageSection from './sections/StageSection';
 import FeedbackSection from './sections/FeedbackSection';
 import AboutSection from './sections/AboutSection';
 import PersonSection from './sections/PersonSection';
+import PortfolioSection from './sections/PortfolioSection';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <div className="section-bg">
         <AboutSection />
         <PersonSection />
+        <PortfolioSection />
       </div>
 
     </div>

@@ -364,8 +364,9 @@ body
 
 // Section bg
 .section-bg
-  background: url(./assets/image/orange_bg.png) no-repeat top center / cover
-  background-size: 120%
+  background: url(./assets/image/section-bg.png) no-repeat top center / cover
+  background-size: 100% 2641px
+
 // About section
 .about
   &__section
@@ -641,3 +642,238 @@ body
   box-shadow: 10px 10px 15px rgba($gray, 0.2)
   margin-top: 128px
   margin-right: 130px
+
+// Portfoilio section
+.portfolio
+  &__section
+    position: relative
+  &__bg
+    position: absolute
+    top: 269px
+    left: -2px
+    width: 100%
+    z-index: -1
+  &__heading
+    padding-top: 59px
+  &__title
+    color: $white
+    font-size: 118px
+    margin-left: -6px
+  &-info
+    color: $white
+    font-size: 20px
+    width: 95%
+    margin-top: 54px
+    &__businnes
+      +bold()
+    &__line
+      height: 2px
+      width: 100%
+      background-color: $white
+      margin-top: 6px
+    &__text
+      margin-top: 20px
+      span
+        +bold()
+  &-cases
+    margin-top: 35px
+.voice
+  font-size: 20px
+  +bold()
+  color: $white
+  margin-top: 33px
+  &__speaker
+    margin-top: 2px
+    margin-left: 15px
+    color: rgba($white, 0.2)
+.player
+  &-controls
+    margin-top: 23px
+    height: 181px
+    width: 181px
+    background-color: $black
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+    &__btn
+      width: 46px
+      height: 46px
+      background-color: rgba($white, 0.4)
+      border: none
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      &:hover
+        cursor: pointer
+    &__btn:nth-child(2n)
+      margin-left: 26px
+    &__icon
+      width: 15px
+    &_bottom
+      margin-top: 22px
+  &-speaker
+    width: 378px
+    height: 378px
+    background-color: $white
+    border-radius: 50%
+  &-widget
+    height: 370px
+    width: 300px
+    margin-top: 31px
+    background-color: $white
+    border-radius: 31px
+    padding: 37px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    &-photo
+      width: 63px
+      height: 63px
+      background-color: $white
+      border-radius: 50%
+      position: relative
+      &__preview
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &-info
+      text-align: center
+      width: 90%
+      overflow: hidden
+      &__name
+        font-size: 20px
+        +bold()
+      &__desc
+        font-size: 20px
+        white-space: nowrap
+        background: linear-gradient(90deg,$white 0%, $black 20%, $black 80%, $white 98%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        color: $black
+    &__spectr
+      max-width: 146px
+    &-controls
+      display: flex
+      align-items: center
+      &__btn:hover
+        cursor: pointer
+      &__btn:nth-child(2)
+        width: 73px
+        height: 73px
+        background: linear-gradient(45deg, $orangeLight, $orangeDark)
+        border-radius: 50%
+        border: none
+        margin: 0 20px
+        img
+          max-width: 18px
+          padding-top: 3px
+          padding-left: 2px
+      &__btn:first-child, &__btn:last-child
+        height: 20px
+        width: 20px
+        border: none
+        background: transparent
+        img
+          width: 15px
+.enjoy
+  color: $white
+  width: 185px
+  margin-top: 117px
+  &__title
+    font-size: 53px
+    +bold()
+    line-height: 51px
+    position: relative
+    z-index: 1
+    &::after
+      content: '&'
+      position: absolute
+      bottom: 13px
+      right: -70px
+      font-size: 186px
+      z-index: 0
+      color: rgba($white, 0.6)
+  &__text
+    &::before
+      content: ''
+      display: block
+      height: 2px
+      width: 100%
+      background-color: $white
+      margin-top: 71px
+      margin-bottom: 8px
+.swiper
+  &-container
+    height: 678px
+.slider
+  position: relative
+  &__next, &__prev
+    height: 40px
+    width: 40px
+    background-color: rgba($white, 0.6)
+    border-radius: 50%
+    z-index: 20
+    border: none
+    &:focus
+      outline: none
+    &:hover
+      cursor: pointer
+    img
+      width: 12px
+  &__prev
+    margin-bottom: 20px
+    img
+      transform: rotate(180deg)
+.case
+  width: 453px
+  height: 80px
+  border-radius: 37px
+  padding: 0 22px
+  background-color: $white
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: -30px
+  &-photo
+    position: relative
+    height: 45px
+    width: 45px
+    border-radius: 50%
+    &__preview
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      object-fit: cover
+  &-info
+    font-size: 20px
+    color: $black
+    overflow: hidden
+    margin-left: 26px
+    overflow: hidden
+    width: 275px
+    &__name
+      +bold()
+    &__desc
+      white-space: nowrap
+      background: linear-gradient(90deg, $black 80%, $white 98%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      color: $black
+  &__btn
+    width: 30px
+    height: 30px
+    border: none
+    background: transparent
+    border-radius: 50%
+    &:hover
+      cursor: pointer
+  &__icon
+    width: 9px
