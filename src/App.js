@@ -8,6 +8,9 @@ import FeedbackSection from './sections/FeedbackSection';
 import AboutSection from './sections/AboutSection';
 import PersonSection from './sections/PersonSection';
 import PortfolioSection from './sections/PortfolioSection';
+import LettersSection from './sections/LettersSection';
+import QuestionsSection from './sections/QuestionsSection';
+import FooterSection from './sections/FooterSection';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <PortfolioSection />
       </div>
 
+      <LettersSection />
+      <QuestionsSection />
+      <FooterSection />
     </div>
   );
 }
