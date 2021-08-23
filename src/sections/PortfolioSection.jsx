@@ -39,8 +39,8 @@ const PortfolioSection = () => {
               Relations: strategies and tactics&raquo;.</p>
           </div>
         </div>
-        <div className="d-flex justify-between">
-          <div className="d-flex flex-column">
+        <div className="d-flex justify-between portfolio__content">
+          <div className="d-flex flex-column portfolio__controls">
             <div className="voice">
               <span className="voice__text">* Voice</span>
               <p className="voice__speaker">©Игорь Малинин</p>
@@ -53,7 +53,7 @@ const PortfolioSection = () => {
                 захватывающим!</p>
             </div>
           </div>
-          <div className="d-flex flex-column align-center ml-20">
+          <div className="d-flex flex-column align-center ml-20 portfolio-players">
             <PlayerSpeaker />
             <PlayerWidget />
           </div>

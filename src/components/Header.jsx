@@ -12,6 +12,7 @@ const Header = () => {
           <li className="nav__item"><a href="#" className="nav__link">Консультация</a></li>
         </ul>
       </nav>
+      <div className="burger">Меню</div>
       <div className="calendar calendar-widget">
         <div className="d-flex align-end">
           <div className="calendar-image">

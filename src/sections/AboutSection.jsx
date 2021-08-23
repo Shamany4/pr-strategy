@@ -10,7 +10,7 @@ const AboutSection = () => {
       <div className="container">
         <div className="d-flex">
           <img src={image} alt="Image screen instagram" className="about__image" />
-          <div className="d-flex flex-column align-end">
+          <div className="d-flex flex-column align-end about__content">
             <div className="about-title">
               <h3 className="about__title">The Business Pill</h3>
             </div>

@@ -6,10 +6,10 @@ const HomeSection = () => {
   return (
     <section className="home">
       <h1 className="section-title home__title">Получите работающую PR-стратегию</h1>
-      <div className="d-flex fkex-column align-start">
+      <div className="d-flex align-start home__content">
         <div className="blockquote d-flex flex-column">
           <div className="d-flex align-center">
-            <div className="arrow-circle">
+            <div className="arrow-circle home__circles">
               <img src={whiteArrowIcon} alt="White arrow icon" />
             </div>
             <div className="circles circles__block">

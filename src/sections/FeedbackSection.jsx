@@ -6,12 +6,11 @@ import whiteArrowIcon from '../assets/icons/whiteArrow.svg';
 const FeedbackSection = () => {
   return (
     <section className="feedback feedback__section">
-      <h2 className="section-title feedback__title">Сейчас</h2>
       <div className="container feedback__content">
         <div className="arrow-circle feedback_circle">
           <img src={whiteArrowIcon} alt="White arrow icon" />
         </div>
-        <div className="d-flex justify-between">
+        <div className="d-flex justify-between feedback__block">
           <aside className="feedback-aside">
             <div className="feedback-aside-circle">
               <img src={smile} alt="Изображение смайлика" className="feedback-aside-circle__smile" />
@@ -42,6 +41,7 @@ const FeedbackSection = () => {
               наши специалисты.</p>
           </div>
         </div>
+        <h2 className="section-title feedback__title">Сейчас</h2>
       </div>
     </section>
   )

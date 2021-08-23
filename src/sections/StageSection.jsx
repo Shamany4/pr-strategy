@@ -7,7 +7,7 @@ const StageSection = () => {
       <div className="container">
 
         <div className="stage__content">
-          <div className="d-flex justify-between">
+          <div className="d-flex justify-between stage-content">
             <div className="d-flex flex-column">
               <StepBlock
                 count="01"

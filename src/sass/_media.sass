@@ -1,0 +1,367 @@
+@media screen and (max-width: 1140px)
+  .container
+    width: 960px
+    border-left: 1px solid red
+    border-right: 1px solid red
+  .header
+    &_line
+      display: none
+  .nav__item:not(:last-child)::after
+    display: none
+  .nav__item:not(:last-child)
+    margin-right: 18px
+  .calendar
+    &-widget
+      padding: 0
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &__desc
+      width: 80%
+      text-align: center
+  .home
+    &__title
+      width: 100%
+      font-size: 140px
+      margin-top: 30px
+    &__content
+      align-items: center
+  .dividends__content
+    margin-top: 0
+    margin-left: 200px
+  .experience
+    &__content
+      .d-flex
+        justify-content: space-between
+    &__title
+      top: -72px
+      left: -4px
+      font-size: 107px
+    &-card
+      z-index: 0
+  .stage
+    &__section
+      padding-bottom: 350px
+    &-progress
+      display: none
+    &-content
+      flex-direction: column
+      align-items: center
+      .align-end
+        align-items: flex-start
+  .step
+    width: 750px
+    &__block
+      display: flex
+      flex-direction: column
+    .align-start
+      align-items: center
+    &-description
+      margin-top: 0
+    &__count
+      display: flex
+      justify-content: center
+      align-items: center
+      min-width: 210px
+    &__text
+      margin-top: 20px
+  .step_right:first-child .step-description,
+  .step_right:last-child .step-description
+    margin-left: 33px
+  .step:first-child .step__text,
+  .step:last-child .step__text,
+  .step_right:first-child .step__text,
+  .step_right:last-child .step__text,
+    width: 100%
+  .step_right:last-child .step__text,
+    margin-top: 20px
+  .step_right:first-child, .step_right:last-child
+    margin-top: 74px
+  .step_right:last-child .step__count
+    margin-top: 0
+  .feedback
+    &__title
+      margin-left: 0
+      margin-top: -51px
+      font-size: 285px
+    &__content
+      .justify-between
+        justify-content: space-between
+    &-aside
+      margin-left: 0
+  .section
+    &-bg
+      background-size: 133% 2641px
+  .about
+    &__section
+      position: relative
+      overflow: hidden
+    &__content
+      align-items: flex-start
+    &-consultation
+      &_circle
+        left: 270px
+        top: 0
+    &__image
+      width: 67%
+      margin-top: 106px
+      margin-left: -86px
+  .person
+    &-photo
+      display: none
+    &-info
+      width: 100%
+      padding-left: 50px
+    &__details, &__figure, &-desc
+      margin-left: 0
+    &-column
+      &_one
+        width: 40%
+      &_three
+        width: 40%
+  .instagram
+    margin-right: 0
+  .portfolio
+    &__section
+      overflow: hidden
+    &__title
+      width: 100%
+    &__heading
+      flex-direction: column
+    &__bg
+      top: 324px
+      height: 895px
+      width: 122%
+    &-info
+      width: 100%
+      .align-end
+        align-items: flex-start
+    &__content
+      flex-wrap: wrap
+      margin-top: 30px
+    &__controls
+      display: none
+  .letters__section
+    margin-top: 50px
+    overflow-x: hidden
+  .questions
+    &__section
+      overflow: hidden
+@media screen and (max-width: 992px)
+  .container
+    width: 100%
+    padding: 0 15px
+  .nav
+    display: none
+  .burger
+    display: block
+  .calendar-widget
+    width: 246px
+    height: 128px
+  .home
+    &__content
+      flex-direction: column
+    &__title
+      font-size: 90px
+      text-align: center
+    &__circles
+      display: none
+  .circles__block
+    display: none
+  .blockquote
+    width: 90%
+    text-align: center
+    &__text
+      margin-top: 0
+      width: 100%
+  .dividends
+    &__content
+      width: 90%
+      margin-left: 0
+    &__text
+      width: 100%
+      text-align: center
+      margin-top: 25px
+    &-block
+      &::before
+        display: none
+    &__link
+      margin: 50px auto 0 auto
+  .stage
+    &__section
+      padding-bottom: 190px
+  .experience
+    &__section
+      margin-top: 90px
+      height: 522px
+      padding-top: 20px
+    &__title
+      position: static
+      width: 100%
+      font-size: 87px
+      line-height: 85px
+    &__text
+      flex-basis: 43%
+      margin-top: 60px
+      br
+        display: none
+    &-card
+      height: 430px
+      flex-basis: 50%
+      margin-left: 0
+      margin-top: -50px
+      padding: 20px
+      display: flex
+      flex-direction: column
+      text-align: center
+      justify-content: center
+      align-items: center
+      &__title
+        margin-top: 60px
+      &_circle
+        right: calc(50% - 23px)
+  .feedback
+    &__section
+      height: 616px
+    &__block
+      flex-direction: column
+    &-aside
+      margin: 115px auto 0 auto
+      height: 510px
+      padding: 20px
+      text-align: center
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__text
+        width: 80%
+      &-circle
+        &__smile
+          margin-bottom: 60px
+    &-description
+      order: -1
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__heading
+      font-size: 35px
+      margin-bottom: 10px
+      &::after
+        display: none
+    &__text
+      text-align: center
+      width: 80%
+      br
+        display: none
+    &__title
+      margin-top: -14px
+      font-size: 221px
+      text-align: center
+      width: 100%
+  .section-bg
+    background-size: 157% 2641px
+  .about
+    &__image
+      margin-top: 151px
+      margin-left: -153px
+    &__description
+      margin-right: 86px
+    &__text
+      &::after
+        display: none
+    &-figure
+      display: none
+    &-consultation
+      margin-top: 50px
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+  .person
+    &__section
+      height: 760px
+    &__content, &-info, &-controls__btn, &-social
+      display: none
+  .m-person
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__content
+      margin-top: 100px
+    &__name
+      font-size: 40px
+      +bold()
+      margin-top: 25px
+    &__post, &__desc
+      font-size: 20px
+      line-height: 24px
+    &__desc
+      width: 70%
+      margin-top: 30px
+    &-social
+      display: flex
+      margin-top: 50px
+      &__link
+        height: 43px
+        width: 43px
+        background-color: $black
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+      &__link:not(&:last-child)
+        margin-right: 30px
+      &__icon
+        width: 27px
+  .m-instagram
+    margin-top: 0
+  .portfolio
+    &__title
+      text-align: center
+    &-info
+      .align-end
+        align-items: center
+      &__businnes
+        text-align: center
+        font-size: 35px
+      &__text
+        text-align: center
+    &__bg
+      display: none
+    &-cases
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    &-players
+      flex-direction: row
+      align-items: center
+      justify-content: space-around
+      width: 100%
+    &-cases
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+  .slider
+    &__prev, &__next
+      background-color: $black
+  .case
+    margin: 0 auto
+  .swiper
+    &-container
+      margin: 0 auto
+      width: 100%
+  .player
+    &-speaker, &-widget
+      box-shadow: 10px 10px 15px rgba($gray, 0.2)
+    &-speaker
+      height: 250px
+      width: 250px
+  .case
+    box-shadow: 10px 10px 15px rgba($gray, 0.2)
