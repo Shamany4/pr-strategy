@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
+
+
 import calendarIcons from '../assets/icons/calendar.svg';
 
 const Header = () => {
@@ -7,9 +10,34 @@ const Header = () => {
       <div className="header_line"></div>
       <nav className="nav">
         <ul className="nav-list">
-          <li className="nav__item"><a href="#" className="nav__link">Предложение</a></li>
-          <li className="nav__item"><a href="#" className="nav__link">О нас</a></li>
-          <li className="nav__item"><a href="#" className="nav__link">Консультация</a></li>
+          <li className="nav__item">
+            <Link
+              className="nav__link"
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration= {1000}
+            ><span>Предложение</span></Link>
+          </li>
+          <li className="nav__item">
+            <Link
+              className="nav__link"
+              to="about"
+              spy={true}
+              smooth={true}
+              duration= {1500}
+            ><span>О нас</span></Link>
+          </li>
+          <li className="nav__item">
+            <Link
+              className="nav__link"
+              to="questions"
+              spy={true}
+              smooth={true}
+              duration= {1500}
+            ><span>Консультация</span></Link>
+          </li>
         </ul>
       </nav>
       <div className="burger">Меню</div>
