@@ -11,8 +11,8 @@ const FeedbackSection = () => {
           <img src={whiteArrowIcon} alt="White arrow icon" />
         </div>
         <div className="d-flex justify-between feedback__block">
-          <aside className="feedback-aside">
-            <div className="feedback-aside-circle">
+          <aside className="feedback-aside" data-aos="fade-right">
+            <div className="feedback-aside-circle" data-aos="zoom-in">
               <img src={smile} alt="Изображение смайлика" className="feedback-aside-circle__smile" />
             </div>
             <p className="feedback-aside__text section-subtitle">Мы&nbsp;можем скорректировать
@@ -33,7 +33,7 @@ const FeedbackSection = () => {
               фирменного стиля, позволяющие
               вырастить настоящий бренд!</p>
           </aside>
-          <div className="feedback-description">
+          <div className="feedback-description" data-aos="fade-left">
             <h4 className="feedback__heading">Свяжитесь с нами</h4>
             <p className="feedback__text section-subtitle">...мы проконсультируем вас по&nbsp;вопросу <br />
               PR-стратегии, поможем определить объём
@@ -41,7 +41,10 @@ const FeedbackSection = () => {
               наши специалисты.</p>
           </div>
         </div>
-        <h2 className="section-title feedback__title">Сейчас</h2>
+        <h2 className="section-title feedback__title"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+        >Сейчас</h2>
       </div>
     </section>
   )

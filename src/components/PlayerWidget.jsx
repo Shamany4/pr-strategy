@@ -8,7 +8,7 @@ import next from '../assets/player/next-gray.svg';
 
 const PlayerWidget = ({ }) => {
   return (
-    <div className="player-widget">
+    <div className="player-widget" data-aos="fade-up">
       <div className="player-widget-photo">
         <img src={preview} alt="Превью аудиодорожки" className="player-widget-photo__preview" />
       </div>

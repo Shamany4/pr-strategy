@@ -2,7 +2,7 @@ import React from 'react';
 
 import figure from '../assets/icons/footer-figure.svg';
 
-const FooterSection = ({ }) => {
+const FooterSection = () => {
   return (
     <footer className="footer footer__section">
       <div className="d-flex">

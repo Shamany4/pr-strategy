@@ -6,7 +6,7 @@ import caseplay from '../assets/player/case-play.svg';
 
 const AudioCase = ({ }) => {
   return (
-    <div className="case">
+    <div className="case" data-aos="fade-up">
       <div className="d-flex align-center">
         <div className="case-photo">
           <img src={preview} alt="preview" className="case-photo__preview" />

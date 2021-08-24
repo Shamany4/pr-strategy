@@ -1,5 +1,8 @@
 import './style.sass';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Header from './components/Header';
 import HomeSection from './sections/HomeSection';
 import ExperienceSection from './sections/ExperienceSection';
@@ -13,6 +16,11 @@ import QuestionsSection from './sections/QuestionsSection';
 import FooterSection from './sections/FooterSection';
 
 function App() {
+  AOS.init({
+    startEvent: 'DOMContentLoaded',
+    duration: 1000,
+    once: true,
+  });
   return (
     <div className="App">
       <div className="container">

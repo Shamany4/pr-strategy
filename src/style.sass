@@ -104,6 +104,12 @@ body
     margin-top: 13px
     margin-left: -12px
     margin-bottom: 45px
+    animation: translate 10s infinite linear
+@keyframes translate
+  0%
+    transform: translateX(100%)
+  100%
+    transform: translateX(-120%)
 .section-title
   font-size: 159px
   width: 160%
@@ -189,7 +195,6 @@ body
     font-size: 143px
     color: $black
     z-index: 2
-    text-overflow: hidden
     width: 100%
     white-space: nowrap
   &__section
@@ -255,6 +260,14 @@ body
       width: 10px
       border-radius: 10px
       background: linear-gradient(90deg, $orangeLight, $orangeDark)
+      animation: progress_thumb 5s infinite ease-in-out
+@keyframes progress_thumb
+  0%
+    top: 0
+  50%
+    top: calc(100% - 125px)
+  100%
+    top: 0
 .step
   z-index: 2
   color: $white

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const StepBlock = ({ count, title, text, right }) => {
+const StepBlock = ({ count, title, text, right, aos }) => {
   return (
-    <div className={right ? 'step step__block step_right' : 'step step__block'}>
+    <div className={right ? 'step step__block step_right' : 'step step__block'} data-aos={aos}>
       <div className="d-flex align-start">
         <span className="step__count">{count}</span>
         <div className="d-column step-description">

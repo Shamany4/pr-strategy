@@ -9,12 +9,15 @@ const AboutSection = () => {
     <section className="about about__section">
       <div className="container">
         <div className="d-flex">
-          <img src={image} alt="Image screen instagram" className="about__image" />
+          <img src={image} alt="Image screen instagram" className="about__image" data-aos="fade-right"/>
           <div className="d-flex flex-column align-end about__content">
             <div className="about-title">
-              <h3 className="about__title">The Business Pill</h3>
+              <h3 className="about__title"
+                  data-aos="slide-left"
+                  data-aos-duration="1500"
+              >The Business Pill</h3>
             </div>
-            <div className="about-description about__description">
+            <div className="about-description about__description" data-aos="fade-left">
               <div className="about-description__rectangle"></div>
               <div className="d-flex about-line">
                 <h4 className="step__title about-line__title">О холдинге</h4>
@@ -31,10 +34,10 @@ const AboutSection = () => {
                 бизнеса, которому важен результат
                 по&nbsp;продажам &laquo;здесь и&nbsp;сейчас&raquo;.</p>
             </div>
-            <div className="about-consultation">
+            <div className="about-consultation" data-aos="slide-up">
               <h4 className="about-consultation__title">Вас проконсультируют</h4>
               <p className="about-consultation__text">наши ведущие специалисты</p>
-              <div className="arrow-circle about-consultation_circle">
+              <div className="arrow-circle about-consultation_circle" data-aos="slide-left">
                 <img src={orangeArrow} alt="White arrow icon" />
               </div>
             </div>

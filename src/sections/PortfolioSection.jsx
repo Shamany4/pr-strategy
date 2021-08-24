@@ -48,8 +48,8 @@ const PortfolioSection = () => {
       <img src={image} alt="Фоновое изображение" className="portfolio__bg" />
       <div className="container">
         <div className="d-flex justify-between portfolio__heading">
-          <h2 className="section-title portfolio__title">Портфолио</h2>
-          <div className="portfolio-info">
+          <h2 className="section-title portfolio__title" data-aos="fade-right">Портфолио</h2>
+          <div className="portfolio-info" data-aos="fade-left">
             <div className="d-flex flex-column align-end">
               <span className="portfolio-info__businnes">The Business Pill</span>
               <div className="portfolio-info__line"></div>
@@ -61,12 +61,12 @@ const PortfolioSection = () => {
         </div>
         <div className="d-flex justify-between portfolio__content">
           <div className="d-flex flex-column portfolio__controls">
-            <div className="voice">
+            <div className="voice" data-aos="fade-right">
               <span className="voice__text">* Voice</span>
               <p className="voice__speaker">©Игорь Малинин</p>
             </div>
             <PlayerControls />
-            <div className="enjoy">
+            <div className="enjoy" data-aos="fade-up">
               <span className="enjoy__title">Play enjoy</span>
               <p className="enjoy__text section-subtitle">Блокбастер Тарантино
                 уже не&nbsp;кажется таким

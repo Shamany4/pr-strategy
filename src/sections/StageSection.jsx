@@ -17,6 +17,7 @@ const StageSection = () => {
               действующих инструментов, 
               предложение по&nbsp;оптимизации 
               бюджетов."
+                aos="fade-right"
               />
               <StepBlock
                 count="02"
@@ -26,9 +27,10 @@ const StageSection = () => {
               личного. Проработка медиаплана 
               в&nbsp;PR и&nbsp;SMM: площадки, инструменты 
               рекламной кампании, бюджеты."
+                aos="fade-right"
               />
             </div>
-            <div className="stage-progress">
+            <div className="stage-progress" data-aos="fade-up">
               <div className="stage-progress__thumb"></div>
             </div>
             <div className="d-flex flex-column align-end">
@@ -40,6 +42,7 @@ const StageSection = () => {
               Реализация конкретных 
               шагов по&nbsp;кварталам 
               с&nbsp;чёткими KPI."
+                aos="fade-left"
               />
               <StepBlock
                 count="04"
@@ -51,6 +54,7 @@ const StageSection = () => {
               Подключение SERM: реализация 
               плана по&nbsp;защите репутации 
               в&nbsp;интернете."
+                aos="fade-left"
               />
             </div>
           </div>
