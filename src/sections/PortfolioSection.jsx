@@ -21,6 +21,26 @@ const PortfolioSection = () => {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 6,
+        },
+        992: {
+          slidesPerView: 6,
+        },
+        1140: {
+          slidesPerView: 6
+        }
+      }
     });
   }, []);
   return (

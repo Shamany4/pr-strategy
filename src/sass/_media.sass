@@ -127,6 +127,7 @@
       overflow: hidden
     &__title
       width: 100%
+      margin-left: 0
     &__heading
       flex-direction: column
     &__bg
@@ -198,9 +199,10 @@
       padding-top: 20px
     &__title
       position: static
-      width: 100%
+      width: 80%
       font-size: 87px
       line-height: 85px
+      white-space: pre-wrap
     &__text
       flex-basis: 43%
       margin-top: 60px
@@ -293,6 +295,7 @@
     align-items: center
     &__content
       margin-top: 100px
+      display: block
     &__name
       font-size: 40px
       +bold()
@@ -314,7 +317,7 @@
         justify-content: center
         align-items: center
         border-radius: 50%
-      &__link:not(&:last-child)
+      &__link:not(:last-child)
         margin-right: 30px
       &__icon
         width: 27px
@@ -343,6 +346,7 @@
       align-items: center
       justify-content: space-around
       width: 100%
+      margin-left: 0 !important
     &-cases
       width: 100%
       display: flex
@@ -365,3 +369,308 @@
       width: 250px
   .case
     box-shadow: 10px 10px 15px rgba($gray, 0.2)
+  .letters
+    &-circles
+      display: flex
+  .questions
+    &__section
+      padding: 150px 0
+    &__title
+      width: 90%
+      font-size: 140px
+      white-space: pre-wrap
+      top: -2px
+      left: 32px
+@media screen and (max-width: 768px)
+  .calendar
+    &-widget
+      height: 145px
+      width: 270px
+    &__desc
+      font-size: 18px
+  .home
+    &__section
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__title
+      font-size: 60px
+      width: 80%
+  .blockquote
+    align-items: center
+    &__text
+      width: 90%
+      text-align: center
+  .section
+    &-subtitle
+      font-size: 18px
+  .experience
+    &_rectangle
+      height: 633px
+    &__section
+      height: 565px
+    &__title
+      font-size: 65px
+      text-align: center
+      width: 100%
+    &__content
+      .d-flex
+        flex-direction: column
+        align-items: center
+    &__text
+      width: 70%
+      text-align: center
+      margin-top: 25px
+    &-warning
+      top: calc(50% - 40.5px)
+    &-card
+      margin-top: 50px
+      padding: 100px 50px
+      &__text
+        width: 100%
+        br
+          display: none
+  .stage
+    &__section
+      padding-bottom: 600px
+  .step
+    &__block
+      .d-flex
+        flex-direction: column
+        align-items: center
+    // &__count
+    //   width: 100%
+    //   text-align: center
+    &-description
+      margin-left: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      .d-flex
+        flex-direction: row
+  .step:first-child .step__text, .step:last-child .step__text, .step_right:first-child .step__text, .step_right:last-child .step__text
+    width: 70%
+    text-align: center
+  .step_right:first-child .step-description, .step_right:last-child .step-description
+    margin-left: 0
+  .feedback
+    &_circle
+      display: none
+    &-description
+      margin-right: 0
+    &__title
+      margin-top: 0px
+      font-size: 158px
+  .section
+    &-bg
+      background-size: 200% 2641px
+  .about
+    &__section
+      margin-top: 415px
+      padding-bottom: 75px
+    &__image
+      display: none
+    &__title
+      margin-top: 125px
+    &__content
+      width: 100%
+      align-items: center
+    &__description
+      margin-right: 0
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__text
+      width: 100%
+      margin-top: 30px
+    &-consultation
+      margin-right: 0
+      text-align: center
+      display: flex
+      &__text
+        font-size: 18px
+      &_circle
+        left: calc(50% - 23px)
+        top: 70px
+  .m-person
+    &__name, &__post, &__desc
+      text-align: center
+  .portfolio
+    &__title
+      font-size: 80px
+    &-players
+      flex-direction: column
+    &-info
+      &__text
+        font-size: 18px
+  .case
+    &-info
+      &__desc
+        font-size: 18px
+  .questions
+    &-flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &__title
+      font-size: 90px
+      top: 58px
+      left: 22px
+    &__block
+      width: 100%
+      margin-left: 0
+    &__subtitle
+      margin-bottom: 5px
+    &__text
+      &::before
+        display: none
+    &__link
+      margin: 0
+      margin-top: 40px
+@media screen and (max-width: 576px)
+  .home
+    &__title
+      width: 100%
+  .blockquote
+    &__text
+      width: 100%
+  .experience
+    &__title
+      white-space: pre-wrap
+      line-height: 70px
+    &__text
+      width: 100%
+    &-card
+      width: 80%
+    &-warning
+      top: -20.25px
+      left: calc(50% - 40.5px)
+  .stage
+    &__content
+      padding-top: 50px
+  .feedback
+    &-description
+      margin-top: 110px
+    &-aside
+      width: 90%
+    &__title
+      display: none
+  .about
+    &__section
+      margin-top: 155px
+  .player
+    &-widget
+      width: 70%
+  .swiper
+    &-container
+      height: 325px !important
+      margin-bottom: 20px
+      margin-top: 10px
+  .case
+    width: 90%
+  .letters
+    &-block
+      display: flex
+      justify-content: center
+    &-photo
+      width: 80%
+      height: 400px
+    &-hide
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__text
+        width: 80%
+        font-size: 25px
+        text-align: center
+        &::after
+          display: none
+@media screen and (max-width: 450px)
+  .experience
+    &-card
+      width: 100%
+  .stage
+    &__content
+      padding-top: 70px
+  .step
+    width: 100%
+    &__count
+      font-size: 120px
+  .step:first-child .step__text, .step:last-child .step__text, .step_right:first-child .step__text, .step_right:last-child .step__text
+    width: 95%
+  .feedback
+    &__text
+      width: 100%
+    &-aside
+      width: 100%
+      height: 610px
+  .about
+    &__section
+      margin-top: 255px
+    &__title
+      font-size: 80px
+  .m-person
+    &__content
+      margin-top: 80px
+    &__name
+      width: 95%
+  .player
+    &-widget
+      width: 100%
+  .case
+    width: 98%
+  .questions
+    &__title, &__image
+      display: none
+@media screen and (max-width: 375px)
+  .calendar
+    &-widget
+      height: 65px
+      width: 225px
+    &__desc
+      display: none
+  .home
+    &__title
+      font-size: 50px
+      margin-top: 50px
+  .section
+    &-subtitle
+      font-size: 16px
+  .experience
+    &__section
+      height: 650px
+    &__title
+      font-size: 50px
+      line-height: 45px
+    &-card
+      padding: 100px 15px
+  .stage
+    &__content
+      padding-top: 0
+  .feedback
+    &-aside
+      height: 490px
+      &__text
+        width: 100%
+  .section
+    &-bg
+      background-size: 730% 2641px
+  .m-person
+    &__desc
+      width: 95%
+  .portfolio
+    &__title
+      font-size: 50px
+    &-info
+      &__businnes
+        font-size: 20px
+  .letters
+    &-photo
+      height: 350px
+  .questions
+    &__link
+      width: 95%
+      font-size: 16px

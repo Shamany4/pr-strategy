@@ -20,18 +20,24 @@ const LettersSection = ({ }) => {
       breakpoints: {
         // when window width is >= 320px
         320: {
-          slidesPerView: 2,
-          spaceBetween: 20
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true
         },
         // when window width is >= 480px
         480: {
-          slidesPerView: 3,
-          spaceBetween: 30
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true
         },
         // when window width is >= 640px
         640: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        992: {
           slidesPerView: 5,
-          spaceBetween: 100
+          spaceBetween: 60
         },
         1140: {
           slidesPerView: 6
@@ -60,10 +66,10 @@ const LettersSection = ({ }) => {
             <button className="letters-controls__btn letter-controls__prev">
               <img src={whiteArrow} alt="Иконка стрелки" />
             </button>
-            <div class="circles circles__block letters-circles">
-              <div class="circles__item"></div>
-              <div class="circles__item"></div>
-              <div class="circles__item"></div>
+            <div className="circles circles__block letters-circles">
+              <div className="circles__item"></div>
+              <div className="circles__item"></div>
+              <div className="circles__item"></div>
             </div>
             <button className="letters-controls__btn letter-controls__next">
               <img src={whiteArrow} alt="Иконка стрелки" />

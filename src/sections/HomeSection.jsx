@@ -4,7 +4,7 @@ import whiteArrowIcon from '../assets/icons/whiteArrow.svg';
 
 const HomeSection = () => {
   return (
-    <section className="home">
+    <section className="home home__section">
       <h1 className="section-title home__title">Получите работающую PR-стратегию</h1>
       <div className="d-flex align-start home__content">
         <div className="blockquote d-flex flex-column">
