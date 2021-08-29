@@ -401,7 +401,61 @@ body
       background-color: $white
       margin-bottom: 4px
       margin-left: 12px
-
+  &-social
+    position: absolute
+    bottom: -70px
+    right: 60px
+    width: 38%
+    height: 70px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    &__figure
+      position: absolute
+      top: 0
+      left: -78px
+      height: 60px
+      width: 300px
+      background: url('./assets/icons/feedback_bg.svg') no-repeat
+      transition: 0.3s
+      &_telegram
+        left: -78px
+        transition: 0.3s
+      &_whatsapp
+        left: 54px
+        transition: 0.3s
+      &_phone
+        left: 188px
+        transition: 0.3s
+      &_mail
+        left: 322px
+        transition: 0.3s
+    &__link
+      height: 29px
+      width: 29px
+      transition: 0.3s
+      margin-right: 104px
+      position: relative
+      z-index: 2
+      background: none
+      border: none
+      &:hover
+        cursor: pointer
+      svg
+        height: 29px
+        width: 29px
+        transition: 0.3s
+        fill: #80808f
+      &_active
+        height: 41px
+        width: 41px
+        transition: 0.3s
+        margin-bottom: 50px
+        svg
+          height: 41px
+          width: 41px
+          transition: 0.3s
+          fill: url(#linear-gradient)
 // Section bg
 .section-bg
   background: url(./assets/image/section-bg.png) no-repeat top center / cover
@@ -492,6 +546,10 @@ body
 .m-person
   &__content
     display: none
+.speaker
+  &-container
+    height: 100%
+    width: 100%
 .person
   &__section
     width: 100%
@@ -499,8 +557,8 @@ body
     background-color: $white
     margin-top: 47px
   &-photo
-    height: 100%
-    width: 30%
+    height: 819px
+    min-width: 555px
     position: relative
     z-index: 0
     &__img
@@ -542,7 +600,7 @@ body
   &-info
     margin-top: 36px
     padding-left: 145px
-    width: 70%
+    width: 65%
   &__questionnaire
     font-size: 20px
     color: rgba($black, 0.5)
@@ -550,10 +608,25 @@ body
     font-size: 49px
     +bold()
     margin-top: 117px
+    &_igor
+      &::after
+        content: ''
+        display: block
+        height: 2px
+        width: 100%
+        background-color: rgba($gray, 0.3)
+        margin-top: 15px
   &-desc
     margin-top: 95px
     margin-left: 77px
     width: 183px
+    transition: 1s
+    &_active
+      transition: 1s
+    &_igor
+      width: 250px
+      margin-left: 0
+      margin-top: 30px
     &__span
       +bold()
       color: $black
@@ -568,10 +641,18 @@ body
         background-color: $black
         margin-left: 18px
         margin-bottom: 3px
+      &_igor
+        &::after
+          display: none
     &__text
       font-size: 20px
       line-height: 24px
       margin-top: 25px
+      transition: 1s
+      &_igor
+        margin-top: 60px
+      &_active
+        transition: 1s
   &__figure
     margin-left: 26px
   &__icon
@@ -592,19 +673,42 @@ body
     color: $gray
     margin-top: 38px
     margin-left: 5px
+    transition: 1s
+    &_igor
+      margin-left: 100px
+      transition: 1s
   &__quote
     width: 270px
     margin-top: 19px
+    color: rgba($gray, 0.4)
+    transition: 1s
+    &_igor
+      width: 120px
+      margin-left: 180px
+      transition: 1s
   &-social
     display: flex
     margin-right: 200px
     margin-bottom: 50px
     &__item
-      height: 43px
-      width: 43px
       background-color: $black
       border-radius: 50%
       list-style: none
+    &__item:not(&:first-child)
+      margin-left: 30px
+    &__link
+      height: 43px
+      width: 43px
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+        height: 25px
+        width: 25px
+      &:hover
+        svg
+          stroke: url(#social-gradient)
+          fill: url(#social-gradient)
   &-controls
     &__btn
       margin-right: 140px
@@ -619,6 +723,17 @@ body
       border: none
       border-radius: 50%
       position: relative
+      svg
+        width: 20px
+        height: 10px
+        transition: 0.3s
+        margin-right: 3px
+      &:hover
+        cursor: pointer
+      &_active
+        svg
+          transform: rotate(90deg)
+          transition: 0.3s
     &__icon
       height: 15px
       width: 15px
@@ -657,6 +772,11 @@ body
       position: absolute
       top: calc(50% - 3px)
       left: 0
+      transition: 0.8s
+    &_active
+      &::after
+        left: calc(100% - 50%)
+        transition: 0.8s
   &-photo
     writing-mode: vertical-lr
     position: absolute
@@ -688,7 +808,43 @@ body
   box-shadow: 10px 10px 15px rgba($gray, 0.2)
   margin-top: 128px
   margin-right: 130px
-
+  position: relative
+  &-photo
+    position: absolute
+    top: calc(50% - 98px)
+    left: calc(50% - 98px)
+    height: 197px
+    width: 197px
+    &__image
+      border-radius: 50%
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      object-fit: cover
+      &_yuna
+        transform: scale(0)
+        transition: 0.5s
+  &-icons
+    position: absolute
+    bottom: 16px
+    right: 12px
+    height: 43px
+    width: 43px
+    border-radius: 50%
+    background: linear-gradient(100deg, $orangeLight, $orangeDark)
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 2
+    svg
+      width: 27px
+      height: 27px
+      fill: $white
+#instagram
+  g
+  transform: rotate(45deg)
 // Portfoilio section
 .portfolio
   &__section
