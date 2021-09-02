@@ -23,10 +23,8 @@ function App() {
   });
   return (
     <div className="App">
-      <div className="container">
-        <Header />
-        <HomeSection />
-      </div>
+      <Header />
+      <HomeSection />
 
       <ExperienceSection />
 

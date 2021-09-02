@@ -97,9 +97,11 @@ body
     margin-top: 15px
     span
       +bold()
-
 // Home section
 .home
+  &__section
+    width: 100%
+    position: relative
   &__title
     margin-top: 13px
     margin-left: -12px
@@ -110,6 +112,49 @@ body
     transform: translateX(100%)
   100%
     transform: translateX(-120%)
+// Follow Component
+.follow
+  position: absolute
+  &__content
+    align-items: center
+  &__span
+    font-size: 16px
+    +book()
+    writing-mode: vertical-lr
+    transform: rotate(180deg)
+    display: flex
+    align-items: center
+    &::before
+      content: ''
+      display: block
+      height: 40px
+      width: 2px
+      background-color: rgba($gray, 0.2)
+      margin-bottom: 20px
+    &_active
+      color: rgba($white, 0.6)
+      &::before
+        background-color: rgba($white, 0.6)
+  &__link
+    height: 43px
+    width: 43px
+    background-color: rgba($gray, 0.2)
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 20px
+    &_active
+      background-color: rgba($white, 0.3)
+      &:hover
+        background-color: $white
+    svg
+      height: 25px
+      width: 25px
+  &__link:hover
+    svg
+      stroke: url('#follow-gradient')
+      fill: url('#follow-gradient')
 .section-title
   font-size: 159px
   width: 160%
@@ -464,6 +509,8 @@ body
 // About section
 .about
   &__section
+    width: 100%
+    position: relative
     margin-top: 505px
   &__image
     margin-top: 73px
@@ -899,6 +946,9 @@ body
     display: flex
     justify-content: center
     align-items: center
+    &__btn:disabled
+      opacity: 0.7
+      transition: opacity 0.5s linear
     &__btn
       width: 46px
       height: 46px
@@ -908,23 +958,74 @@ body
       display: flex
       justify-content: center
       align-items: center
+      transition: opacity 0.5s linear
+      svg
+        height: 15px
+        width: 15px
+        fill: $white
       &:hover
         cursor: pointer
+        background-color: $white
+        svg
+          fill: $black
     &__btn:nth-child(2n)
       margin-left: 26px
-    &__icon
-      width: 15px
     &_bottom
       margin-top: 22px
   &-speaker
-    width: 378px
-    height: 378px
-    background-color: $white
+    width: 370px
+    height: 370px
     border-radius: 50%
+    &-preview
+      height: 321px
+      width: 321px
+      position: absolute
+      top: calc(50% - 160.5px)
+      left: calc(50% - 160.5px)
+      border-radius: 50%
+      &__image
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        object-fit: cover
+        border-radius: 50%
+    #player-speaker
+      position: absolute
+      top: calc(50% - 185px)
+      left: calc(50% - 185px)
+      transform: rotate(45deg)
+    &-controls
+      position: absolute
+      bottom: 19px
+      right: 8px
+      height: 87px
+      width: 87px
+      background-color: $white
+      border-radius: 50%
+      z-index: 2
+      &__btn
+        background: none
+        border: none
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        &:hover
+          cursor: pointer
+        svg
+          height: 24px
+          width: 24px
+          margin-top: 5px
+          margin-left: 3px
+      &_pause
+        margin-right: 3px
   &-widget
     height: 370px
     width: 300px
-    margin-top: 31px
+    margin-top: 50px
     background-color: $white
     border-radius: 31px
     padding: 37px 0
@@ -944,26 +1045,49 @@ body
         left: 0
         height: 100%
         width: 100%
+        border-radius: 50%
         object-fit: cover
     &-info
       text-align: center
       width: 90%
       overflow: hidden
+      position: relative
+      &::before, &::after
+        content: ''
+        display: block
+        height: 40px
+        width: 50px
+        background: linear-gradient(90deg, $white 40%, rgba($white, 0.3))
+        position: absolute
+        z-index: 2
+        top: 15px
+      &::before
+        left: 0
+      &::after
+        background: linear-gradient(-90deg, $white 40%, rgba($white, 0.3))
+        right: 0
       &__name
         font-size: 20px
         +bold()
       &__desc
         font-size: 20px
-        white-space: nowrap
-        background: linear-gradient(90deg,$white 0%, $black 20%, $black 80%, $white 98%)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
+        margin-top: 5px
+        width: 250%
         color: $black
+        animation: player-widget__text 10s linear infinite
+        @keyframes player-widget__text
+          0%
+            transform: translateX(20%)
+          100%
+            transform: translateX(-100%)
     &__spectr
       max-width: 146px
     &-controls
       display: flex
       align-items: center
+      &__btn:disabled
+        opacity: 0.3
+        transition: opacity 0.5s linear
       &__btn:hover
         cursor: pointer
       &__btn:nth-child(2)
@@ -973,17 +1097,28 @@ body
         border-radius: 50%
         border: none
         margin: 0 20px
-        img
-          max-width: 18px
-          padding-top: 3px
-          padding-left: 2px
+        transition: opacity 0.5s linear
+        svg
+          height: 20px
+          width: 20px
+          margin-top: 2px
+          margin-left: 2px
       &__btn:first-child, &__btn:last-child
         height: 20px
         width: 20px
         border: none
         background: transparent
-        img
+        transition: opacity 0.5s linear
+        svg
+          height: 15px
           width: 15px
+        &:hover
+          svg
+            fill: url('#player-widget-gradient')
+#waveform
+  canvas, wave
+    max-height: 20px
+    cursor: pointer
 .enjoy
   color: $white
   width: 185px
@@ -1055,6 +1190,7 @@ body
       height: 100%
       width: 100%
       object-fit: cover
+      border-radius: 50%
   &-info
     font-size: 20px
     color: $black
@@ -1070,16 +1206,31 @@ body
       -webkit-text-fill-color: transparent
       color: $black
   &__btn
-    width: 30px
-    height: 30px
+    min-width: 30px
+    min-height: 30px
     border: none
     background: transparent
     border-radius: 50%
+    svg
+      height: 10px
+      width: 10px
     &:hover
       cursor: pointer
-  &__icon
-    width: 9px
-
+      background: linear-gradient(45deg, $orangeLight, $orangeDark)
+      svg
+        fill: $white
+        margin-left: 2px
+    &_active
+      background: linear-gradient(45deg, $orangeLight, $orangeDark)
+      &:hover
+        svg
+          margin-left: 0
+    &_play
+      svg
+        margin-left: 2px
+      &:hover
+        svg
+          margin-left: 2px
 // Letters section
 .letters
   &__section

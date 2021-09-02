@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Follow from '../components/Follow';
 import image from '../assets/image/instagram-screen.png';
 
 import orangeArrow from '../assets/icons/orangeArrow.svg';
@@ -7,14 +7,15 @@ import orangeArrow from '../assets/icons/orangeArrow.svg';
 const AboutSection = () => {
   return (
     <section className="about about__section">
+      <Follow bottom={200} left={5 + '%'} />
       <div className="container">
         <div className="d-flex">
-          <img src={image} alt="Image screen instagram" className="about__image" data-aos="fade-right"/>
+          <img src={image} alt="Image screen instagram" className="about__image" data-aos="fade-right" />
           <div className="d-flex flex-column align-end about__content">
             <div className="about-title">
               <h3 className="about__title"
-                  data-aos="slide-left"
-                  data-aos-duration="1500"
+                data-aos="slide-left"
+                data-aos-duration="1500"
               >The Business Pill</h3>
             </div>
             <div className="about-description about__description" data-aos="fade-left">
