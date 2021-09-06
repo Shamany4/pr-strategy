@@ -32,6 +32,7 @@ const PortfolioSection = () => {
   const waveRef = useRef(null);
 
   const circleRef = useRef(null);
+  const circleRef_2 = useRef(null);
 
   const changeState = () => {
     setPlaying(!playing);
@@ -51,6 +52,7 @@ const PortfolioSection = () => {
     new Swiper('.swiper-container', {
       direction: 'vertical',
       slidesPerView: 6,
+      allowTouchMove: false,
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
@@ -179,6 +181,15 @@ const PortfolioSection = () => {
     let offset = circumference - percent / 100 * circumference;
     circleRef.current.style.strokeDashoffset = offset;
     circleRef.current.style.transition = '0.5s';
+
+    const radius_2 = circleRef_2.current.r.baseVal.value;
+    const circumference_2 = 2 * Math.PI * radius;
+    circleRef_2.current.style.strokeDasharray = ` ${circumference} ${circumference} `;
+    circleRef_2.current.style.strokeDashoffset = circumference;
+
+    let offset_2 = circumference_2 - percent / 100 * circumference_2;
+    circleRef_2.current.style.strokeDashoffset = offset_2;
+    circleRef_2.current.style.transition = '0.5s';
   }
 
   return (
@@ -224,6 +235,7 @@ const PortfolioSection = () => {
             <PlayerSpeaker
               current={currentSound.preview}
               useRef={circleRef}
+              useRef_2={circleRef_2}
               isPlay={playing}
               isReady={isReady}
               playFunc={playAudio}

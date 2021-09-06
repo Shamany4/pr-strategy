@@ -514,7 +514,7 @@
   #waveform
     min-width: 80% !important
     canvas, wave
-      width: 100%
+      min-width: 100%
       max-height: 30px !important
   .case
     margin: 0 auto
@@ -928,8 +928,12 @@
     position: absolute
     top: calc(50% - 150px)
     left: calc(50% - 150px)
+    transform: rotate(50deg)
   #waveform
     min-width: 90% !important
+    canvas, wave
+      min-width: 100%
+      max-height: 30px !important
   .swiper
     &-container
       width: 100%

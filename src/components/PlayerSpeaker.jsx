@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlayerSpeaker = ({ useRef, current, isPlay, setPlay, isReady, playFunc, pauseFunc }) => {
+const PlayerSpeaker = ({ useRef, useRef_2, current, isPlay, setPlay, isReady, playFunc, pauseFunc }) => {
 
   const getUrlImage = () => {
     return require('../assets/cases/image/' + current);
@@ -55,7 +55,7 @@ const PlayerSpeaker = ({ useRef, current, isPlay, setPlay, isReady, playFunc, pa
       <svg height="370" width="370" id="player-speaker">
         <g>
           <circle
-            id="player-speaker__circle"
+            className="player-speaker__circle"
             cx="185"
             cy="185"
             r="180"
@@ -65,7 +65,7 @@ const PlayerSpeaker = ({ useRef, current, isPlay, setPlay, isReady, playFunc, pa
             opacity={0.2}
           />
           <circle
-            id="player-speaker__animate"
+            className="player-speaker__animate"
             ref={useRef}
             cx="185"
             cy="185"
@@ -91,7 +91,7 @@ const PlayerSpeaker = ({ useRef, current, isPlay, setPlay, isReady, playFunc, pa
           />
           <circle
             id="player-speaker__animate"
-            ref={useRef}
+            ref={useRef_2}
             cx="150"
             cy="150"
             r="140"
