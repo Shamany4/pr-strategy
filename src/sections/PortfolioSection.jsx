@@ -1,9 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper.scss';
 import json from '../assets/cases/cases.json';
-
 import WaveSurfer from 'wavesurfer.js';
+
 
 import whiteArrow from '../assets/icons/whiteArrow.svg';
 import image from '../assets/image/portfolio-bg.jpg';
@@ -38,7 +38,17 @@ const PortfolioSection = () => {
   }
 
   useEffect(() => {
-    const swiper = new Swiper('.swiper-container', {
+    wavesurfer = WaveSurfer.create({
+      container: waveRef.current,
+      waveColor: '#DADADF',
+      progressColor: '#818191',
+      barWidth: 3,
+      barHeight: 1, // the height of the wave
+      barGap: null,
+      cursorWidth: 0
+    });
+    loadAudioWave(currentIndex);
+    new Swiper('.swiper-container', {
       direction: 'vertical',
       slidesPerView: 6,
       // Navigation arrows
@@ -48,16 +58,16 @@ const PortfolioSection = () => {
       },
       breakpoints: {
         320: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 0,
         },
         // when window width is >= 480px
         480: {
-          slidesPerView: 3,
-          spaceBetween: 20,
+          slidesPerView: 2,
+          spaceBetween: 30,
         },
         640: {
-          slidesPerView: 6,
+          slidesPerView: 4,
         },
         992: {
           slidesPerView: 6,
@@ -72,19 +82,6 @@ const PortfolioSection = () => {
   const getAudioPath = (index) => {
     return require('../assets/cases/audio/' + json[index].path);
   }
-
-  useEffect(() => {
-    wavesurfer = WaveSurfer.create({
-      container: '#waveform',
-      waveColor: '#DADADF',
-      progressColor: '#818191',
-      barWidth: 3,
-      barHeight: 1, // the height of the wave
-      barGap: null,
-      cursorWidth: 0
-    });
-    loadAudioWave(currentIndex);
-  }, []);
 
   const loadAudioWave = (currentIndex) => {
     wavesurfer.load(getAudioPath(currentIndex).default);
@@ -165,6 +162,7 @@ const PortfolioSection = () => {
         setProgress((current / duration) * 100);
       });
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   const changeSound = async (index) => {
@@ -178,7 +176,7 @@ const PortfolioSection = () => {
     circleRef.current.style.strokeDasharray = ` ${circumference} ${circumference} `;
     circleRef.current.style.strokeDashoffset = circumference;
 
-    const offset = circumference - percent / 100 * circumference;
+    let offset = circumference - percent / 100 * circumference;
     circleRef.current.style.strokeDashoffset = offset;
     circleRef.current.style.transition = '0.5s';
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../assets/letters/letters_1.jpeg';
 
-const LettersBlock = ({ }) => {
+const LettersBlock = () => {
   return (
     <div className="letters-block">
       <div className="letters-photo">

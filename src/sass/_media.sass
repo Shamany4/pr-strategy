@@ -1,3 +1,11 @@
+@media screen and (max-width: 1370px)
+  iframe
+    margin-top: 50px
+    width: 100%
+    position: static
+    order: 2
+  .m-follow
+    bottom: 60% !important
 @media screen and (max-width: 1140px)
   .container
     width: 960px
@@ -46,10 +54,11 @@
     &-progress
       display: none
     &-content
-      flex-direction: column
+      display: none
+  .m-stage
+    &-content
+      display: flex
       align-items: center
-      .align-end
-        align-items: flex-start
   .step
     width: 750px
     &__block
@@ -66,20 +75,21 @@
       min-width: 210px
     &__text
       margin-top: 20px
+
+  .step__block:last-child
+    margin-top: 0
   .step_right:first-child .step-description,
   .step_right:last-child .step-description
     margin-left: 33px
   .step:first-child .step__text,
   .step:last-child .step__text,
   .step_right:first-child .step__text,
-  .step_right:last-child .step__text,
+  .step_right:last-child .step__text
     width: 100%
-  .step_right:last-child .step__text,
+  .step_right:last-child .step__text
     margin-top: 20px
-  .step_right:first-child, .step_right:last-child
-    margin-top: 74px
-  .step_right:last-child .step__count
-    margin-top: 0
+  .step__block:not(:last-child)
+    margin-bottom: 50px
   .feedback
     &__title
       margin-left: 0
@@ -158,7 +168,125 @@
   .nav
     display: none
   .burger
+    height: 70px
+    width: 70px
+    background-color: $white
+    border-radius: 50%
+    border: none
+    box-shadow: 10px 10px 15px rgba($gray, 0.2)
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      cursor: pointer
+    &__span
+      display: block
+      height: 2px
+      width: 25px
+      background-color: rgba($gray, 0.3)
+      position: relative
+      &::before, &::after
+        content: ''
+        display: block
+        height: 2px
+        width: 25px
+        background-color: rgba($gray, 0.3)
+        position: absolute
+        left: 0
+      &::before
+        top: -8px
+        transition: 0.3s
+      &::after
+        top: 8px
+        transition: 0.3s
+      &_active
+        background-color: transparent
+        &::before
+          top: 0
+          transform: rotate(45deg)
+          transition: 0.3s
+        &::after
+          top: 0
+          transform: rotate(-45deg)
+          transition: 0.3s
+  .drop-block
     display: block
+    height: 100%
+    width: 100%
+    position: fixed
+    bottom: -100%
+    right: -100%
+    background: linear-gradient(90deg, $orangeLight, $orangeDark)
+    z-index: 99
+    color: $white
+    transition: 0.3s
+    &_active
+      bottom: 0
+      right: 0
+      transition: 0.3s
+    &-wrapper
+      height: 100%
+      width: 90%
+      margin: 0 auto
+      position: relative
+      padding-bottom: 25px
+    &_close
+      position: absolute
+      top: 30px
+      right: 30px
+      background: none
+      border: none
+      color: $white
+      font-size: 50px
+      &::after
+        content: ''
+        display: block
+        height: 2px
+        width: 0
+        background-color: $white
+        margin-top: 5px
+        transition: 0.3s
+      &:hover
+        cursor: pointer
+        &::after
+          width: 100%
+          transition: 0.3s
+    &__title
+      font-size: 80px
+      width: 300px
+      padding-top: 50px
+    &__subtitle
+      font-size: 18px
+      +bold()
+    &-social
+      margin-top: 15px
+      display: flex
+    &-card:not(:last-child)
+      margin-right: 30px
+    &__icon
+      height: 50px
+      width: 50px
+      background-color: $white
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      box-shadow: 10px 10px 15px rgba($gray, 0.2)
+      svg
+        height: 25px
+        width: 25px
+      &:hover, &:focus
+        cursor: pointer
+        svg
+          fill: url(#drop-block-gradient)
+          stroke: url(#drop-block-gradient)
+    &__name
+      margin-top: 5px
+    &__follow
+      display: block
+      margin-top: 40px
+    &__offer
+      color: $white
   .calendar-widget
     width: 246px
     height: 128px
@@ -168,6 +296,7 @@
     &__title
       font-size: 90px
       text-align: center
+      animation: none
     &__circles
       display: none
   .circles__block
@@ -265,10 +394,10 @@
       font-size: 221px
       text-align: center
       width: 100%
-    &-social
+    &-social, &_circle
       display: none
   .section-bg
-    background-size: 157% 2641px
+    background-size: 157% 3020px
   .about
     &__image
       margin-top: 151px
@@ -298,8 +427,17 @@
     justify-content: center
     align-items: center
     &__content
-      margin-top: 100px
+      margin-top: 80px
       display: block
+    &__insta
+      background: none
+      border: none
+      font-size: 25px
+      +bold()
+      margin-top: 25px
+      color: $gray
+      &:hover
+        cursor: pointer
     &__name
       font-size: 40px
       +bold()
@@ -310,21 +448,20 @@
     &__desc
       width: 70%
       margin-top: 30px
+      text-align: center
     &-social
       display: flex
-      margin-top: 50px
-      &__link
-        height: 43px
-        width: 43px
-        background-color: $black
+      justify-content: center
+      align-items: center
+      &-list
+        margin: 50px 0 0 0
         display: flex
-        justify-content: center
-        align-items: center
-        border-radius: 50%
-      &__link:not(:last-child)
-        margin-right: 30px
-      &__icon
-        width: 27px
+      &__link
+        &:hover
+          cursor: pointer
+          svg
+            stroke: url(#m-social-gradient)
+            fill: url(#m-social-gradient)
   .m-instagram
     margin-top: 0
   .portfolio
@@ -359,19 +496,28 @@
   .slider
     &__prev, &__next
       background-color: $black
-  .case
-    margin: 0 auto
   .swiper
     &-container
-      margin: 0 auto
-      width: 100%
+      height: 500px
+      width: 550px
   .player
     &-speaker, &-widget
       box-shadow: 10px 10px 15px rgba($gray, 0.2)
     &-speaker
       height: 250px
       width: 250px
+      z-index: 2
+      &-controls
+        box-shadow: 10px 10px 15px rgba($gray, 0.2)
+        bottom: -14px
+        right: -64px
+  #waveform
+    min-width: 80% !important
+    canvas, wave
+      width: 100%
+      max-height: 30px !important
   .case
+    margin: 0 auto
     box-shadow: 10px 10px 15px rgba($gray, 0.2)
   .letters
     &-circles
@@ -401,6 +547,8 @@
     &__title
       font-size: 60px
       width: 80%
+      margin: 30px auto 45px auto
+      text-align: center
   .blockquote
     align-items: center
     &__text
@@ -440,12 +588,11 @@
       padding-bottom: 600px
   .step
     &__block
+      width: 80%
+      text-align: center
       .d-flex
         flex-direction: column
         align-items: center
-    // &__count
-    //   width: 100%
-    //   text-align: center
     &-description
       margin-left: 0
       display: flex
@@ -454,7 +601,7 @@
       .d-flex
         flex-direction: row
   .step:first-child .step__text, .step:last-child .step__text, .step_right:first-child .step__text, .step_right:last-child .step__text
-    width: 70%
+    width: 100%
     text-align: center
   .step_right:first-child .step-description, .step_right:last-child .step-description
     margin-left: 0
@@ -464,11 +611,8 @@
     &-description
       margin-right: 0
     &__title
-      margin-top: 0px
+      margin-top: 0
       font-size: 158px
-  .section
-    &-bg
-      background-size: 200% 2641px
   .about
     &__section
       margin-top: 415px
@@ -509,6 +653,9 @@
     &-info
       &__text
         font-size: 18px
+  .player
+    &-speaker, &-widget
+      margin-top: 100px
   .case
     &-info
       &__desc
@@ -533,7 +680,37 @@
     &__link
       margin: 0
       margin-top: 40px
+@media screen and (max-width: 711px)
+  .letters
+    &-block
+      display: flex
+      justify-content: center
+    &-photo
+      width: 60%
+      height: 400px
+    &-hide
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 0
+      &__text
+        width: 80%
+        font-size: 25px
+        text-align: center
+        &::after
+          display: none
+@media screen and (max-width: 627px)
+  iframe
+    width: 100%
+    height: 500px
 @media screen and (max-width: 576px)
+  .calendar
+    &-widget
+      height: 65px
+      width: 225px
+    &__desc
+      display: none
   .home
     &__title
       width: 100%
@@ -554,6 +731,9 @@
   .stage
     &__content
       padding-top: 50px
+  .step
+    &__block
+      width: 100%
   .feedback
     &-description
       margin-top: 110px
@@ -561,120 +741,210 @@
       width: 90%
     &__title
       display: none
-  .about
-    &__section
-      margin-top: 155px
-  .player
-    &-widget
-      width: 70%
-  .swiper
-    &-container
-      height: 325px !important
-      margin-bottom: 20px
-      margin-top: 10px
-  .case
-    width: 90%
-  .letters
-    &-block
-      display: flex
-      justify-content: center
-    &-photo
-      width: 80%
-      height: 400px
-    &-hide
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      &__text
-        width: 80%
-        font-size: 25px
-        text-align: center
-        &::after
-          display: none
-@media screen and (max-width: 450px)
-  .experience
-    &-card
-      width: 100%
-  .stage
-    &__content
-      padding-top: 70px
-  .step
-    width: 100%
-    &__count
-      font-size: 120px
-  .step:first-child .step__text, .step:last-child .step__text, .step_right:first-child .step__text, .step_right:last-child .step__text
-    width: 95%
-  .feedback
-    &__text
-      width: 100%
-    &-aside
-      width: 100%
-      height: 610px
+  .section
+    &-bg
+      background-size: 547% 3020px
   .about
     &__section
       margin-top: 255px
     &__title
       font-size: 80px
-  .m-person
-    &__content
-      margin-top: 80px
-    &__name
-      width: 95%
-  .player
-    &-widget
-      width: 100%
-  .case
-    width: 98%
-  .questions
-    &__title, &__image
-      display: none
-@media screen and (max-width: 375px)
-  .calendar
-    &-widget
-      height: 65px
-      width: 225px
-    &__desc
-      display: none
-  .home
-    &__title
-      font-size: 50px
-      margin-top: 50px
-  .section
-    &-subtitle
-      font-size: 16px
-  .experience
-    &__section
-      height: 650px
-    &__title
-      font-size: 50px
-      line-height: 45px
-    &-card
-      padding: 100px 15px
-  .stage
-    &__content
-      padding-top: 0
-  .feedback
-    &-aside
-      height: 490px
-      &__text
-        width: 100%
-  .section
-    &-bg
-      background-size: 730% 2641px
-  .m-person
-    &__desc
-      width: 95%
   .portfolio
     &__title
       font-size: 50px
     &-info
       &__businnes
         font-size: 20px
+  .player
+    &-widget
+      width: 70%
+      &-controls
+        &__btn:nth-child(2)
+          width: 73px
+          height: 73px
+          svg
+            height: 25px
+            width: 25px
+        &__btn:first-child, &__btn:last-child
+          height: 30px
+          width: 30px
+          svg
+            height: 20px
+            width: 20px
+  .swiper
+    &-container
+      width: 90%
+      height: 650px
+      padding-bottom: 50px
+      margin-bottom: 20px
+      margin-top: 10px
+  .case
+    width: 80%
+    height: auto
+    &__content
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &-photo
+      height: 80px
+      width: 80px
+      margin-top: 20px
+    &-info
+      margin: 15px 0 15px 0
+      width: 95%
+      &::after
+        display: none
+      &__desc
+        white-space: pre-wrap
+    &-button
+      margin: 15px 0
+    &__btn
+      height: 40px
+      width: 40px
+      svg
+        height: 15px
+        width: 15px
+        margin-top: 3px
   .letters
     &-photo
-      height: 350px
-  .questions
-    &__link
-      width: 95%
+      width: 80%
+      height: 450px
+@media screen and (max-width: 430px)
+  .calendar
+    &-widget
+      height: 55px
+      width: 180px
+    &-image
+      display: none
+    &__title
+      margin-left: 0
+  .burger
+    height: 60px
+    width: 60px
+  .drop-block
+    &_close
+      top: 20px
+      right: 0
+      font-size: 30px
+    &__title
+      font-size: 30px
+      padding-top: 50px
+    &-social
+      flex-wrap: wrap
+    &-card:not(:last-child)
+      margin-right: 20px
+    &__icon
+      height: 40px
+      width: 40px
+      svg
+        height: 20px
+        width: 20px
+    &-offer
+      justify-content: center
+    &__offer
       font-size: 16px
+  .home
+    &__title
+      font-size: 40px
+  .section
+    &-subtitle
+      font-size: 16px
+  .dividends
+    &__link
+      font-size: 16px
+  .experience
+    &__title
+      font-size: 40px
+      line-height: 40px
+    &-card
+      padding: 80px 10px
+      width: 100%
+      &__title
+        margin-top: 30px
+      &_circle
+        bottom: 15px
+  .stage
+    &__section
+      padding-bottom: 410px
+    &__content
+      padding-top: 0
+  .step
+    &__count
+      font-size: 120px
+    &__title:first-child
+      align-items: center
+      margin-right: 10px
+      &::after
+        margin-top: 10px
+        width: 20px
+        margin-left: 10px
+  .feedback
+    &__heading
+      text-align: center
+      font-size: 30px
+    &__text
+      width: 100%
+    &-aside
+      width: 100%
+      padding: 10px
+      &-circle
+        &__smile
+          width: 40px
+          margin-bottom: 80px
+      &__text
+        width: 100%
+  .about
+    &__title
+      width: 100%
+  .person
+    &__section
+      padding-bottom: 30px
+  .m-person
+    &__content
+      margin-top: 35px
+    &__insta
+      font-size: 20px
+    &__post, &__desc
+      width: 90%
+  .player
+    &-widget
+      width: 100%
+    &-speaker
+      background-color: blue
+      height: 250px
+      width: 250px
+      &-preview
+        height: 250px
+        width: 250px
+        top: calc(50% - 125px)
+        left: calc(50% - 125px)
+      &-controls
+        bottom: -5px
+        right: -17px
+  #player-speaker
+    display: none
+  #m-player-speaker
+    display: block
+    position: absolute
+    top: calc(50% - 150px)
+    left: calc(50% - 150px)
+  #waveform
+    min-width: 90% !important
+  .swiper
+    &-container
+      width: 100%
+  .case
+    width: 95%
+  .letters
+    &-photo
+      width: 95%
+      height: 370px
+  .questions
+    &__title
+      display: none
+    &__link
+      width: 100%
+    &__image
+      top: -76px
+      right: 38px
+      width: 50%

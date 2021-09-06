@@ -2,7 +2,7 @@ import React from 'react';
 
 import image from '../assets/image/businnes.png';
 
-const QuestionsSection = ({ }) => {
+const QuestionsSection = () => {
   return (
     <section className="questions questions__section">
       <h2 className="section-title questions__title" data-aos="zoom-in">Остались вопросы?</h2>
@@ -14,7 +14,7 @@ const QuestionsSection = ({ }) => {
             <p className="questions__text section-subtitle" data-aos="fade-up">Получите консультацию
               наших специалистов</p>
           </div>
-          <a href="#" className="questions__link" data-aos="fade-left">Получить предложение</a>
+          <button className="questions__link" data-aos="fade-left">Получить предложение</button>
         </div>
       </div>
     </section>

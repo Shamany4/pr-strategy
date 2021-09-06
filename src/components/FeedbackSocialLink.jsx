@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Link, NavLink } from "react-router-dom";
+import React from 'react';
 
-const FeedbackSocialLink = ({ active, name, viebox, path_1, path_2 }) => {
+const FeedbackSocialLink = ({ active, name, viebox, url, path_1, path_2 }) => {
+
+  const openUrlHandler = (url) => {
+    window.open(url);
+  }
+
   const clickLinkHandler = (name) => {
+
     let figure = document.querySelector('.feedback-social__figure');
-    let link = document.querySelector('.feedback-social__link');
+
     switch (name) {
       case 'telegram':
         figure.classList.remove('feedback-social__figure_whatsapp');
@@ -38,9 +43,10 @@ const FeedbackSocialLink = ({ active, name, viebox, path_1, path_2 }) => {
   return (
     <button
       className={'feedback-social__link' + (active === name ? ' feedback-social__link_active' : '')}
-      onClick={() => {
+      onMouseEnter={() => {
         clickLinkHandler(name)
       }}
+      onClick={() => openUrlHandler(url)}
     >
       <svg viewBox={viebox}>
         <linearGradient id="linear-gradient">

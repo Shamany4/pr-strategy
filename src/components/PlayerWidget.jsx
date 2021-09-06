@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-
-import preview from '../assets/image/preview.png';
-
+import React from 'react';
 
 const PlayerWidget = ({ isPlay, endPlaylist, isReady, setPlay, useRef, playFunc, pauseFunc, current, nextFunc, prevFunc }) => {
 
@@ -33,8 +30,8 @@ const PlayerWidget = ({ isPlay, endPlaylist, isReady, setPlay, useRef, playFunc,
       }
       <div className="player-widget-controls">
         <button className="player-widget-controls__btn"
-                onClick={prevFunc}
-                disabled={!isReady || endPlaylist.start}
+          onClick={prevFunc}
+          disabled={!isReady || endPlaylist.start}
         >
           <svg viewBox="0 0 15 8.62" fill="#D9D9DE" stroke="none">
             <linearGradient id="player-widget-gradient">
@@ -45,8 +42,8 @@ const PlayerWidget = ({ isPlay, endPlaylist, isReady, setPlay, useRef, playFunc,
           </svg>
         </button>
         <button className="player-widget-controls__btn"
-                onClick={playSoundHandler}
-                disabled={!isReady}
+          onClick={playSoundHandler}
+          disabled={!isReady}
         >
           {
             !isPlay
@@ -64,8 +61,8 @@ const PlayerWidget = ({ isPlay, endPlaylist, isReady, setPlay, useRef, playFunc,
           }
         </button>
         <button className="player-widget-controls__btn"
-                onClick={nextFunc}
-                disabled={!isReady || endPlaylist.finish}
+          onClick={nextFunc}
+          disabled={!isReady || endPlaylist.finish}
         >
           <svg viewBox="0 0 15 8.62" fill="#D9D9DE" stroke="none">
             <linearGradient id="player-widget-gradient">

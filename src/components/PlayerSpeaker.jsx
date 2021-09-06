@@ -1,6 +1,4 @@
-import React, {useRef} from 'react';
-
-import casePhoto_1 from '../assets/cases/image/preview_1.jpg';
+import React from 'react';
 
 const PlayerSpeaker = ({ useRef, current, isPlay, setPlay, isReady, playFunc, pauseFunc }) => {
 
@@ -27,8 +25,8 @@ const PlayerSpeaker = ({ useRef, current, isPlay, setPlay, isReady, playFunc, pa
           <circle cx="43.5" cy="43.5" r="35" strokeWidth={3} stroke="gray" fill="none" opacity={0.2} />
         </svg>
         <button className="player-speaker-controls__btn"
-                onClick={playSoundHandler}
-                disabled={!isReady}
+          onClick={playSoundHandler}
+          disabled={!isReady}
         >
           {
             !isPlay
@@ -42,26 +40,61 @@ const PlayerSpeaker = ({ useRef, current, isPlay, setPlay, isReady, playFunc, pa
               </svg>
               :
               <svg viewBox="0 0 9.84 12.21" fill="url(#player-speaker-gradient)"
-                   className="player-speaker-controls_pause"
+                className="player-speaker-controls_pause"
               >
                 <linearGradient id="player-speaker-gradient">
                   <stop offset="0%" stopColor="#FF6E65" />
                   <stop offset="100%" stopColor="#C14C45" />
                 </linearGradient>
-                <rect width="3.89" height="12.21" rx="1.94"/>
-                <rect x="5.95" width="3.89" height="12.21" rx="1.94"/>
+                <rect width="3.89" height="12.21" rx="1.94" />
+                <rect x="5.95" width="3.89" height="12.21" rx="1.94" />
               </svg>
           }
         </button>
       </div>
       <svg height="370" width="370" id="player-speaker">
         <g>
-          <circle cx="185" cy="185" r="180" strokeWidth={4} stroke="#FFFFFF" fill="none" opacity={0.2} />
           <circle
+            id="player-speaker__circle"
+            cx="185"
+            cy="185"
+            r="180"
+            strokeWidth={4}
+            stroke="#FFFFFF"
+            fill="none"
+            opacity={0.2}
+          />
+          <circle
+            id="player-speaker__animate"
             ref={useRef}
             cx="185"
             cy="185"
             r="180"
+            strokeWidth={6}
+            stroke="#FFFFFF"
+            fill="none"
+          >
+          </circle>
+        </g>
+      </svg>
+      <svg height="300" width="300" id="m-player-speaker">
+        <g>
+          <circle
+            id="player-speaker__circle"
+            cx="150"
+            cy="150"
+            r="140"
+            strokeWidth={4}
+            stroke="#FFFFFF"
+            fill="none"
+            opacity={0.2}
+          />
+          <circle
+            id="player-speaker__animate"
+            ref={useRef}
+            cx="150"
+            cy="150"
+            r="140"
             strokeWidth={6}
             stroke="#FFFFFF"
             fill="none"

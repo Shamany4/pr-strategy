@@ -5,9 +5,9 @@ import LettersBlock from '../components/LettersBlock';
 
 import whiteArrow from '../assets/icons/whiteArrow.svg';
 
-const LettersSection = ({ }) => {
+const LettersSection = () => {
   useEffect(() => {
-    const swiper = new Swiper('.letters-container', {
+    new Swiper('.letters-container', {
       direction: 'horizontal',
       slidesPerView: 6,
       spaceBetween: 25,
@@ -31,9 +31,14 @@ const LettersSection = ({ }) => {
           centeredSlides: true
         },
         // when window width is >= 640px
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 30
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: true
+        },
+        712: {
+          slidesPerView: 4,
+          spaceBetween: 150
         },
         992: {
           slidesPerView: 5,

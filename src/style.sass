@@ -18,8 +18,6 @@ body
     height: 30px
     width: 14px
     background-color: rgba($gray, 0.2)
-.burger
-  display: none
 .nav
   &-list
     display: flex
@@ -68,6 +66,8 @@ body
       &::after
         left: 0
         transition: left 0.2s linear
+.burger, .drop-block
+  display: none
 .calendar
   &-widget
     width: 294px
@@ -102,6 +102,10 @@ body
   &__section
     width: 100%
     position: relative
+  &-block
+    position: relative
+    display: flex
+    flex-direction: column
   &__title
     margin-top: 13px
     margin-left: -12px
@@ -112,9 +116,78 @@ body
     transform: translateX(100%)
   100%
     transform: translateX(-120%)
+// Audio player component
+iframe
+  position: absolute
+  bottom: 146px
+  right: 9px
+  z-index: 2
+.audio-player
+  position: absolute
+  bottom: 146px
+  right: 9px
+  height: 448px
+  width: 448px
+  box-shadow: 10px 10px 15px rgba($gray, 0.2)
+  z-index: 2
+  background-color: $white
+  border-radius: 50%
+  &-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 2
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__svg
+    position: absolute
+    top: calc(50% - 224px)
+    left: calc(50% - 224px)
+  &__time
+    font-size: 68px
+    +bold()
+    color: $black
+  &-image
+    height: 63px
+    width: 63px
+    border-radius: 50%
+    position: relative
+    margin-top: 40px
+    &__preview
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      border-radius: 50%
+      object-fit: cover
+  &__artist
+    font-size: 20px
+    +bold()
+  &__name
+    font-size: 16px
+    +book()
+    margin-bottom: 30px
+.block
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  border-radius: 50%
+  z-index: 3
+  background-color: rgba($black, 0.8)
+  display: flex
+  justify-content: center
+  align-items: center
 // Follow Component
 .follow
   position: absolute
+  z-index: 2
   &__content
     align-items: center
   &__span
@@ -138,6 +211,8 @@ body
   &__link
     height: 43px
     width: 43px
+    border: none
+    background: none
     background-color: rgba($gray, 0.2)
     border-radius: 50%
     display: flex
@@ -152,6 +227,7 @@ body
       height: 25px
       width: 25px
   &__link:hover
+    cursor: pointer
     svg
       stroke: url('#follow-gradient')
       fill: url('#follow-gradient')
@@ -282,6 +358,8 @@ body
       font-size: 47px
 
 // Stage section
+.m-stage-content
+  display: none
 .stage
   background-color: $black
   &__section
@@ -322,6 +400,7 @@ body
     font-size: 143px
     +bold()
     width: 175px
+    text-align: center
   &-description
     margin-left: 33px
     margin-top: 28px
@@ -356,12 +435,10 @@ body
   &::after
     width: 97px
 .step_right:first-child .step__text
-  width: 193px
-.step_right:first-child .step-description
+  width: 305px
+.step_right:first-child .step-description, .step_right:last-child .step-description
   margin-left: 41px
 
-.step_right:last-child
-  margin-top: 95px
 .step_right:last-child .step__title
   margin-right: 10px
   &::after
@@ -370,8 +447,6 @@ body
 .step_right:last-child .step__text
   width: 270px
   margin-top: 28px
-.step_right:last-child .step-description
-  margin-left: 46px
 .step_right:last-child .step__count
   margin-top: 3px
 
@@ -458,22 +533,22 @@ body
     &__figure
       position: absolute
       top: 0
-      left: -78px
+      left: -73px
       height: 60px
       width: 300px
       background: url('./assets/icons/feedback_bg.svg') no-repeat
       transition: 0.3s
       &_telegram
-        left: -78px
+        left: -73px
         transition: 0.3s
       &_whatsapp
-        left: 54px
+        left: 60px
         transition: 0.3s
       &_phone
-        left: 188px
+        left: 194px
         transition: 0.3s
       &_mail
-        left: 322px
+        left: 327px
         transition: 0.3s
     &__link
       height: 29px
@@ -492,15 +567,22 @@ body
         transition: 0.3s
         fill: #80808f
       &_active
-        height: 41px
-        width: 41px
+        height: 65px
+        width: 65px
+        background-color: $white
+        border-radius: 50%
         transition: 0.3s
         margin-bottom: 50px
         svg
           height: 41px
           width: 41px
+          margin-top: 3px
           transition: 0.3s
           fill: url(#linear-gradient)
+      &__span
+        display: block
+        height: 100%
+        width: 100%
 // Section bg
 .section-bg
   background: url(./assets/image/section-bg.png) no-repeat top center / cover
@@ -717,10 +799,14 @@ body
     +bold()
     text-decoration: none
     font-size: 20px
+    background: none
+    border: none
     color: $gray
     margin-top: 38px
     margin-left: 5px
     transition: 1s
+    &:hover
+      cursor: pointer
     &_igor
       margin-left: 100px
       transition: 1s
@@ -741,11 +827,14 @@ body
       background-color: $black
       border-radius: 50%
       list-style: none
-    &__item:not(&:first-child)
       margin-left: 30px
+      &:first-child
+        margin-left: 0
     &__link
       height: 43px
       width: 43px
+      background: none
+      border: none
       display: flex
       justify-content: center
       align-items: center
@@ -753,6 +842,7 @@ body
         height: 25px
         width: 25px
       &:hover
+        cursor: pointer
         svg
           stroke: url(#social-gradient)
           fill: url(#social-gradient)
@@ -1115,9 +1205,11 @@ body
         &:hover
           svg
             fill: url('#player-widget-gradient')
+#m-player-speaker
+  display: none
 #waveform
-  canvas, wave
-    max-height: 20px
+  canvas
+    max-height: 30px
     cursor: pointer
 .enjoy
   color: $white
@@ -1196,18 +1288,31 @@ body
     color: $black
     overflow: hidden
     margin-left: 26px
-    width: 275px
+    max-width: 300px
+    position: relative
+    &::after
+      content: ''
+      display: block
+      height: 30px
+      width: 40px
+      position: absolute
+      bottom: 0
+      right: 0
+      background: linear-gradient(-90deg, $white 40%, rgba($white, 0.3))
     &__name
       +bold()
     &__desc
       white-space: nowrap
-      background: linear-gradient(90deg, $black 80%, $white 98%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
       color: $black
+  &-button
+    min-width: 40px
+    min-height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
   &__btn
-    min-width: 30px
-    min-height: 30px
+    height: 30px
+    width: 30px
     border: none
     background: transparent
     border-radius: 50%
@@ -1309,7 +1414,7 @@ body
     position: relative
   &__title
     position: absolute
-    top: -12px
+    top: 19px
     left: -108px
     font-size: 288px
     white-space: nowrap
@@ -1340,6 +1445,8 @@ body
   &__link
     width: 320px
     height: 60px
+    background: none
+    border: none
     background: linear-gradient(90deg, $orangeLight, $orangeDark)
     display: flex
     justify-content: center
@@ -1352,6 +1459,8 @@ body
     margin-bottom: 33px
     margin-left: 62px
     z-index: 2
+    &:hover
+      cursor: pointer
 
 // Footer section
 .footer

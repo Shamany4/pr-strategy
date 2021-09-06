@@ -1,13 +1,16 @@
 import React from 'react';
 
-import whiteArrowIcon from '../assets/icons/whiteArrow.svg';
 import Follow from '../components/Follow';
+import AudioPlayer from "../components/AudioPlayer";
+
+import whiteArrowIcon from '../assets/icons/whiteArrow.svg';
 
 const HomeSection = () => {
   return (
     <section className="home home__section">
       <Follow bottom={60} right={5 + '%'} />
-      <div className="container">
+      <div className="container home-block">
+        <AudioPlayer />
         <h1 className="section-title home__title">Получите работающую PR-стратегию</h1>
         <div className="d-flex align-start home__content">
           <div className="blockquote d-flex flex-column">
