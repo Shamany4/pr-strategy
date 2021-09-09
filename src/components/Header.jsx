@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 
 import calendarIcons from '../assets/icons/calendar.svg';
 import figure from "../assets/icons/footer-figure.svg";
+import CalendarWidget from "./CalendarWidget";
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -159,16 +160,7 @@ const Header = () => {
           <span className={active ? 'burger__span burger__span_active' : 'burger__span'}> </span>
         </button>
 
-        <div className="calendar calendar-widget">
-          <div className="d-flex align-end">
-            <div className="calendar-image">
-              <img src={calendarIcons} alt="Calendar icon" className="calendar-image__icon" />
-            </div>
-            <h3 className="calendar__title">Внести в календарь</h3>
-          </div>
-          <p className="calendar__desc"><span>Сейчас</span> самое время —
-            Завтра будет поздно!</p>
-        </div>
+        <CalendarWidget />
       </div>
     </header>
   )
