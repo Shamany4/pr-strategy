@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Linking } from 'react';
-
 const Follow = ({ bottom, right, left }) => {
   const openUrlHandler = (url) => {
     window.open(url);

@@ -13,11 +13,12 @@ import PersonSocialLink from "../components/PersonSocialLink";
 const PersonSection = () => {
   const [active, setActive] = useState(false);
   const animateRef = useRef(null);
-  const animateRef_2 = useRef(null);
+  const buttonRef = useRef(null);
 
 
-  const clickBtnHandler = () => {
+  const clickBtnHandler = async () => {
     setActive(!active);
+    animateRef.current.beginElement();
   }
 
   const openUrlHandler = (url) => {
@@ -25,22 +26,18 @@ const PersonSection = () => {
   }
 
   useEffect(() => {
-
-    animateRef.current.addEventListener('endEvent', () => {
-      setActive(true)
+    animateRef.current.addEventListener('repeatEvent', () => {
+      setActive(!active);
     })
+  }, [active])
 
-    animateRef_2.current.addEventListener('endEvent', () => {
-      setActive(false)
-    })
-
-
+  useEffect(() => {
     new Swiper('.person-container', {
       direction: 'horizontal',
       slidesPerView: 1,
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 10000,
       },
     });
   }, []);
@@ -75,7 +72,7 @@ const PersonSection = () => {
           <div className={active ? 'count__progress count__progress_active' : 'count__progress'}></div>
         </div>
         <div className="count-photo">
-          <span className="count-photo__number">01</span>
+          <span className="count-photo__number">{active ? '02' : '01'}</span>
           <span className="count-photo__number">02</span>
         </div>
       </div>
@@ -163,18 +160,11 @@ const PersonSection = () => {
                     <animate
                       ref={animateRef}
                       id="line"
-                      attributeName="stroke-dasharray"
-                      begin="0s;line_2.end"
                       values="0;760"
                       dur="20s"
-                    />
-                    <animate
-                      ref={animateRef_2}
-                      id="line_2"
+                      begin="person__btn.click"
+                      repeatCount="indefinite"
                       attributeName="stroke-dasharray"
-                      begin="line.end"
-                      values="0;760"
-                      dur="20s"
                     />
                   </circle>
                 </g>
@@ -182,6 +172,7 @@ const PersonSection = () => {
             </div>
             <button
               className={!active ? 'person__link person__link_igor' : 'person__link'}
+              ref={buttonRef}
               onClick={() => openUrlHandler(!active ? 'https://vk.com/igor_malinin' : 'https://vk.com/julinnmilli')}
             >
               {!active ? '@igormalinin.ru' : '@milevskaya_pr_jvm'}
@@ -224,7 +215,11 @@ const PersonSection = () => {
               path_2="M18.64,27.83H9.19A9.2,9.2,0,0,1,0,18.64V9.19A9.2,9.2,0,0,1,9.19,0h9.45a9.2,9.2,0,0,1,9.19,9.19v9.45A9.2,9.2,0,0,1,18.64,27.83ZM9.19,2.19a7,7,0,0,0-7,7v9.45a7,7,0,0,0,7,7h9.45a7,7,0,0,0,7-7V9.19a7,7,0,0,0-7-7Z"
             />
           </ul>
-          <button className={active ? 'person-controls__btn person-controls__btn_active' : 'person-controls__btn'} onClick={clickBtnHandler}>
+          <button
+            className={active ? 'person-controls__btn person-controls__btn_active' : 'person-controls__btn'}
+            onClick={clickBtnHandler}
+            id="person__btn"
+          >
             <svg strokeWidth={2} stroke="#000000" fill="none" className="person-controls__icon" viewBox="0 0 12.74 7.9">
               <path d="M.69,1,6.44,6.49,12,.69,6.44,6.49Z" />
             </svg>

@@ -45,8 +45,18 @@ const LettersSection = () => {
           spaceBetween: 60
         },
         1140: {
+          slidesPerView: 5
+        },
+        1245: {
           slidesPerView: 6
+        },
+        1460: {
+          slidesPerView: 7
+        },
+        1645: {
+          slidesPerView: 8
         }
+
       }
     });
   }, []);
