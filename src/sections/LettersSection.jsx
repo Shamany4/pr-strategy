@@ -77,15 +77,19 @@ const LettersSection = () => {
         </div>
         <div className="letters-container">
           <div className="swiper-wrapper">
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
-            <div className="swiper-slide"><LettersBlock /></div>
+            <div className="swiper-slide"><LettersBlock path="letters_1.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_2.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_3.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_4.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_5.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_6.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_7.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_8.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_9.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_10.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_11.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_12.webp"/></div>
+            <div className="swiper-slide"><LettersBlock path="letters_13.webp"/></div>
           </div>
           <div className="letters-controls">
             <ArrowCircle
