@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from "react-scroll";
 
-
-import calendarIcons from '../assets/icons/calendar.svg';
-import figure from "../assets/icons/footer-figure.svg";
 import CalendarWidget from "./CalendarWidget";
 
 const Header = () => {
@@ -112,8 +109,10 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="d-flex drop-block-offer">
-            <img src={figure} alt="Изображение фигуры" className="footer__figure" />
+          <div className="d-flex drop-block-offer align-center">
+            <svg viewBox="0 0 9.21 15.54" fill="white" className="footer__figure">
+              <rect width="9.21" height="15.54" rx="4.6"/>
+            </svg>
             <p className="footer__text drop-block__offer">Holding company The Business Pill</p>
           </div>
 

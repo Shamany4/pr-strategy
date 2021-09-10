@@ -3,6 +3,7 @@ import Follow from '../components/Follow';
 import image from '../assets/image/instagram-screen.png';
 
 import orangeArrow from '../assets/icons/orangeArrow.svg';
+import ArrowCircle from "../components/ArrowCircle";
 
 const AboutSection = () => {
   return (
@@ -38,9 +39,18 @@ const AboutSection = () => {
             <div className="about-consultation" data-aos="slide-up">
               <h4 className="about-consultation__title">Вас проконсультируют</h4>
               <p className="about-consultation__text">наши ведущие специалисты</p>
-              <div className="arrow-circle about-consultation_circle" data-aos="slide-left">
-                <img src={orangeArrow} alt="White arrow icon" />
-              </div>
+              <ArrowCircle
+                secondClass="about-consultation_circle"
+                height={46}
+                width={46}
+                background="#ffffff"
+                orange={true}
+                stroke="white"
+                strokeWidth={2}
+                angle={0}
+                heightSVG={13}
+                widthSVG={13}
+              />
             </div>
             <div className="about-figure">
               <div className="about-figure__line"></div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import smile from '../assets/icons/smile.svg';
-import whiteArrowIcon from '../assets/icons/whiteArrow.svg';
 import FeedbackSocialLink from '../components/FeedbackSocialLink';
+import ArrowCircle from "../components/ArrowCircle";
 
 const FeedbackSection = () => {
 
@@ -42,9 +42,17 @@ const FeedbackSection = () => {
   return (
     <section className="feedback feedback__section">
       <div className="container feedback__content">
-        <div className="arrow-circle feedback_circle">
-          <img src={whiteArrowIcon} alt="White arrow icon" />
-        </div>
+        <ArrowCircle
+          secondClass="feedback_circle"
+          height={46}
+          width={46}
+          background="#000000"
+          stroke="white"
+          strokeWidth={2}
+          angle={0}
+          heightSVG={12}
+          widthSVG={12}
+        />
         <div className="d-flex justify-between feedback__block">
           <aside className="feedback-aside" data-aos="fade-right">
             <div className="feedback-aside-circle" data-aos="zoom-in">

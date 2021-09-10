@@ -1,6 +1,6 @@
 import React from 'react';
 
-import whiteArrowIcon from '../assets/icons/whiteArrow.svg';
+import ArrowCircle from "../components/ArrowCircle";
 
 const ExperienceSection = () => {
   return (
@@ -19,9 +19,17 @@ const ExperienceSection = () => {
             <div className="experience-warning">
               <span>!</span>
             </div>
-            <div className="arrow-circle experience-card_circle">
-              <img src={whiteArrowIcon} alt="White arrow icon" />
-            </div>
+            <ArrowCircle
+              secondClass="experience-card_circle"
+              height={46}
+              width={46}
+              background="#000000"
+              stroke="white"
+              strokeWidth={2}
+              angle={0}
+              heightSVG={10}
+              widthSVG={11}
+            />
           </div>
         </div>
       </div>

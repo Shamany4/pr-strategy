@@ -2,8 +2,7 @@ import React from 'react';
 
 import Follow from '../components/Follow';
 import AudioPlayer from "../components/AudioPlayer";
-
-import whiteArrowIcon from '../assets/icons/whiteArrow.svg';
+import ArrowCircle from "../components/ArrowCircle";
 
 const HomeSection = () => {
   return (
@@ -17,9 +16,17 @@ const HomeSection = () => {
             <div className="d-flex align-center"
               data-aos="fade-right"
             >
-              <div className="arrow-circle home__circles">
-                <img src={whiteArrowIcon} alt="White arrow icon" />
-              </div>
+              <ArrowCircle
+                secondClass="home__circles"
+                height={46}
+                width={46}
+                background="#000000"
+                stroke="white"
+                strokeWidth={2}
+                angle={0}
+                heightSVG={10}
+                widthSVG={11}
+              />
               <div className="circles circles__block">
                 <div className="circles__item"></div>
                 <div className="circles__item"></div>
