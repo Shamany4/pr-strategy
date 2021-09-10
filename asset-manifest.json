@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pr-strategy/static/css/main.008b11c8.chunk.css",
+    "main.css": "/pr-strategy/static/css/main.88eb1cc5.chunk.css",
     "main.js": "/pr-strategy/static/js/main.9834c70c.chunk.js",
     "main.js.map": "/pr-strategy/static/js/main.9834c70c.chunk.js.map",
     "runtime-main.js": "/pr-strategy/static/js/runtime-main.78789373.js",
@@ -12,7 +12,7 @@
     "static/js/3.021a870e.chunk.js.map": "/pr-strategy/static/js/3.021a870e.chunk.js.map",
     "index.html": "/pr-strategy/index.html",
     "static/css/2.a0a1c007.chunk.css.map": "/pr-strategy/static/css/2.a0a1c007.chunk.css.map",
-    "static/css/main.008b11c8.chunk.css.map": "/pr-strategy/static/css/main.008b11c8.chunk.css.map",
+    "static/css/main.88eb1cc5.chunk.css.map": "/pr-strategy/static/css/main.88eb1cc5.chunk.css.map",
     "static/js/2.5400c2ca.chunk.js.LICENSE.txt": "/pr-strategy/static/js/2.5400c2ca.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pr-strategy/static/media/Futura-PT-Heavy.c957cf0d.ttf",
     "static/media/businnes.28814815.webp": "/pr-strategy/static/media/businnes.28814815.webp",
@@ -50,7 +50,7 @@
     "static/js/runtime-main.78789373.js",
     "static/css/2.a0a1c007.chunk.css",
     "static/js/2.5400c2ca.chunk.js",
-    "static/css/main.008b11c8.chunk.css",
+    "static/css/main.88eb1cc5.chunk.css",
     "static/js/main.9834c70c.chunk.js"
   ]
 }
