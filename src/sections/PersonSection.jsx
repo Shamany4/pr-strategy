@@ -2,10 +2,10 @@ import { React, useEffect, useState, useRef } from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper.scss';
 
-import photo_1 from '../assets/image/photo_1.jpg';
-import photo_2 from '../assets/image/photo_2.jpeg';
-import insta_1 from '../assets/image/insta_1.jpg';
-import insta_2 from '../assets/image/insta_2.jpeg';
+import photo_1 from '../assets/image/photo_1.webp';
+import photo_2 from '../assets/image/photo_2.webp';
+import insta_1 from '../assets/image/insta_1.webp';
+import insta_2 from '../assets/image/insta_2.webp';
 
 import PersonSocialLink from "../components/PersonSocialLink";
 

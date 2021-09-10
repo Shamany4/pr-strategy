@@ -1,8 +1,7 @@
 import React from 'react';
 import Follow from '../components/Follow';
-import image from '../assets/image/instagram-screen.png';
+import image from '../assets/image/instagram-screen.webp';
 
-import orangeArrow from '../assets/icons/orangeArrow.svg';
 import ArrowCircle from "../components/ArrowCircle";
 
 const AboutSection = () => {

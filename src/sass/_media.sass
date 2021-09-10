@@ -1,3 +1,10 @@
+@media screen and (max-width: 1440px)
+  .person
+    &-photo
+      display: none
+    &-info
+      width: 100%
+      padding-left: 50px
 @media screen and (max-width: 1370px)
   iframe
     margin-top: 50px
@@ -79,7 +86,6 @@
       min-width: 210px
     &__text
       margin-top: 20px
-
   .step__block:last-child
     margin-top: 0
   .step_right:first-child .step-description,
@@ -120,15 +126,9 @@
         left: 270px
         top: 0
     &__image
-      width: 67%
-      margin-top: 106px
+      margin-top: 160px
       margin-left: -86px
   .person
-    &-photo
-      display: none
-    &-info
-      width: 100%
-      padding-left: 50px
     &__details, &__figure, &-desc
       margin-left: 0
     &-column
@@ -592,7 +592,10 @@
           display: none
   .stage
     &__section
+      padding-top: 100px
       padding-bottom: 600px
+    &__content
+      margin-top: 0
   .step
     &__block
       width: 80%
@@ -706,6 +709,10 @@
   .player
     &-speaker
       margin-top: 60px
+@media screen and (max-width: 616px)
+  .stage
+    &__section
+      padding-top: 200px
 @media screen and (max-width: 576px)
   .calendar
     &-widget
@@ -730,10 +737,22 @@
     &-warning
       top: -20.25px
       left: calc(50% - 40.5px)
-  .stage
-    &__content
-      padding-top: 50px
+  .person
     &__section
+      height: 750px
+    &-container
+      min-width: 100%
+  .m-person
+    &__content
+      padding: 0
+    &__name
+      font-size: 30px
+    &__desc
+      width: 98%
+      font-size: 18px
+  .stage
+    &__section
+      padding-top: 170px
       padding-bottom: 650px
   .step
     &__block
@@ -764,7 +783,6 @@
         font-size: 20px
   .player
     &-widget
-      width: 60%
       &-controls
         &__btn:nth-child(2)
           width: 73px
@@ -845,6 +863,8 @@
       flex-wrap: wrap
     &-card:not(:last-child)
       margin-right: 20px
+    &-card
+      min-width: 50px
     &__icon
       height: 40px
       width: 40px
@@ -865,6 +885,8 @@
     &__link
       font-size: 16px
   .experience
+    &__section
+      height: 550px
     &__title
       font-size: 40px
       line-height: 40px
@@ -877,9 +899,8 @@
         bottom: 15px
   .stage
     &__section
-      padding-bottom: 560px
-    &__content
       padding-top: 0
+      padding-bottom: 560px
   .step
     &__count
       font-size: 120px
@@ -908,6 +929,8 @@
       &__text
         width: 100%
   .about
+    &__section
+      margin-top: 140px
     &__title
       width: 100%
     &-consultation
@@ -915,17 +938,15 @@
         font-size: 18px
   .person
     &__section
-      padding-bottom: 30px
+      height: 670px
   .m-person
     &__content
       margin-top: 35px
     &__insta
       font-size: 20px
-    &__post, &__desc
-      width: 90%
   .player
     &-widget
-      width: 100%
+      width: 90%
       margin-top: 50px
     &-speaker
       background-color: blue
@@ -962,7 +983,7 @@
   .letters
     &-photo
       width: 95%
-      height: 370px
+      height: 420px
   .questions
     &__title
       display: none

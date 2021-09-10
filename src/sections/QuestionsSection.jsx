@@ -1,6 +1,6 @@
 import React from 'react';
 
-import image from '../assets/image/businnes.png';
+import image from '../assets/image/businnes.webp';
 
 const QuestionsSection = () => {
   return (

@@ -6,7 +6,7 @@ import WaveSurfer from 'wavesurfer.js';
 
 
 import whiteArrow from '../assets/icons/whiteArrow.svg';
-import image from '../assets/image/portfolio-bg.jpg';
+import image from '../assets/image/portfolio-bg.webp';
 import PlayerControls from '../components/PlayerControls';
 import PlayerSpeaker from '../components/PlayerSpeaker';
 import PlayerWidget from '../components/PlayerWidget';
