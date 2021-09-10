@@ -14,7 +14,12 @@ const QuestionsSection = () => {
             <p className="questions__text section-subtitle" data-aos="fade-up">Получите консультацию
               наших специалистов</p>
           </div>
-          <button className="questions__link" data-aos="fade-left">Получить предложение</button>
+          <button className="questions__link"
+                  data-aos="fade-left"
+                  onClick={() => {
+                    window.open('https://www.google.ru/forms/about/')
+                  }}
+          >Получить предложение</button>
         </div>
       </div>
     </section>

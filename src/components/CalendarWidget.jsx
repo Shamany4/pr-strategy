@@ -3,7 +3,7 @@ import calendarIcons from "../assets/icons/calendar.svg";
 
 const CalendarWidget = () => {
   const clickButtonHandler = () => {
-    window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=Nm1nazMyZjRydWxxbGowc3QwYWw1cmE4YzMgZHFhbmExOHM3cmZmcXNoN2M2cmJiZWFybTRAZw&tmsrc=dqana18s7rffqsh7c6rbbearm4%40group.calendar.google.com')
+    window.open('https://calendar.google.com/event?action=TEMPLATE&tmeid=MHRwbDh2YXVib2hrczZqdWM1OTY4c25mMjMgaGVkZGRqbWN2N285bDh0ZmV1ODB1Z2FuM3NAZw&tmsrc=hedddjmcv7o9l8tfeu80ugan3s%40group.calendar.google.com')
   }
 
   return(

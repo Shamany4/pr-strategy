@@ -4,6 +4,7 @@ import 'swiper/swiper.scss';
 import LettersBlock from '../components/LettersBlock';
 
 import whiteArrow from '../assets/icons/whiteArrow.svg';
+import ArrowCircle from "../components/ArrowCircle";
 
 const LettersSection = () => {
   useEffect(() => {
@@ -14,8 +15,16 @@ const LettersSection = () => {
       loop: true,
       // Navigation arrows
       navigation: {
-        nextEl: '.letter-controls__next',
-        prevEl: '.letter-controls__prev',
+        nextEl: '.letters-controls__next',
+        prevEl: '.letters-controls__prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        bulletElement: 'span',
+        bulletActiveClass: 'letters-controls__bullet_active',
+        bulletClass: 'letters-controls__bullet',
+        clickable: true
       },
       breakpoints: {
         // when window width is >= 320px
@@ -63,6 +72,9 @@ const LettersSection = () => {
   return (
     <section className="letters letters__section">
       <div className="letters__content">
+        <div className="letters-hide">
+          <p className="letters-hide__text"><span>Благодарственные письма</span> о нашей работе </p>
+        </div>
         <div className="letters-container">
           <div className="swiper-wrapper">
             <div className="swiper-slide"><LettersBlock /></div>
@@ -75,20 +87,30 @@ const LettersSection = () => {
             <div className="swiper-slide"><LettersBlock /></div>
             <div className="swiper-slide"><LettersBlock /></div>
           </div>
-        </div>
-        <div className="container">
-          <div className="letters-controls d-flex align-center justify-center">
-            <button className="letters-controls__btn letter-controls__prev">
-              <img src={whiteArrow} alt="Иконка стрелки" />
-            </button>
-            <div className="circles circles__block letters-circles">
-              <div className="circles__item"></div>
-              <div className="circles__item"></div>
-              <div className="circles__item"></div>
-            </div>
-            <button className="letters-controls__btn letter-controls__next">
-              <img src={whiteArrow} alt="Иконка стрелки" />
-            </button>
+          <div className="letters-controls">
+            <ArrowCircle
+              secondClass="letters-controls__prev"
+              height={46}
+              width={46}
+              background="#000000"
+              stroke="white"
+              strokeWidth={2}
+              angle={90}
+              heightSVG={10}
+              widthSVG={11}
+            />
+            <div className="swiper-pagination"></div>
+            <ArrowCircle
+              secondClass="letters-controls__next"
+              height={46}
+              width={46}
+              background="#000000"
+              stroke="white"
+              strokeWidth={2}
+              angle={-90}
+              heightSVG={10}
+              widthSVG={11}
+            />
           </div>
         </div>
       </div>

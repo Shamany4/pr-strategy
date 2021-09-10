@@ -121,9 +121,12 @@ body
 // Audio player component
 iframe
   position: absolute
-  bottom: 146px
-  right: 9px
+  bottom: 100px
+  right: 0
   z-index: 2
+  border-radius: 20px
+  height: 294px
+  width: 294px
 .audio-player
   position: absolute
   bottom: 146px
@@ -290,8 +293,10 @@ iframe
     +book()
     background: linear-gradient(90deg, $orangeLight, $orangeDark)
     border-radius: 187px
+    &:hover
+      cursor: pointer
 
-// Experinece section
+// Experience section
 .experience
   height: 383px
   background-color: #EBEBEB
@@ -590,8 +595,10 @@ iframe
     position: relative
     margin-top: 505px
   &__image
-    margin-top: 73px
-    margin-left: 18px
+    margin-top: 150px
+    margin-left: 0
+    width: 517px
+    height: 770px
   &-title
     display: block
   &__title
@@ -605,7 +612,7 @@ iframe
     -webkit-text-fill-color: transparent
   &__description
     margin-top: 48px
-    margin-right: 126px
+    margin-left: 125px
   &-line
     color: $white
     h4:first-child::after
@@ -622,34 +629,29 @@ iframe
   &__text:last-child::after
     content: ''
     position: absolute
-    right: 9px
-    bottom: -35px
+    right: -58px
+    bottom: -47px
     width: 34px
     height: 10px
     background-color: $white
   &-consultation
     color: $white
     margin-top: 99px
-    margin-right: 135px
+    margin-left: 125px
     font-size: 20px
-    position: relative
+    display: flex
+    div:last-child
+      margin-top: 13px
+      margin-left: 35px
     &__title
       +bold()
     &__text
       margin-top: 1px
-    &_circle
-      background-color: $white
-      position: absolute
-      top: -14px
-      left: -83px
-      img
-        width: 14px
-        margin-top: 4px
   &-figure
     display: flex
     align-items: center
     margin-top: 54px
-    margin-right: 135px
+    margin-left: 125px
     &__line
       width: 209px
       height: 2px
@@ -866,6 +868,7 @@ iframe
         svg
           transform: rotate(90deg)
           transition: 0.3s
+          margin-right: 6px
     &__icon
       height: 15px
       width: 15px
@@ -1255,6 +1258,7 @@ iframe
     margin-bottom: 20px
     img
       transform: rotate(180deg)
+      margin-bottom: 2px
 .case
   width: 453px
   height: 80px
@@ -1337,12 +1341,16 @@ iframe
     margin-top: 207px
   &-container
     width: 100%
+  &__content
+    position: relative
   &-photo
     height: 207px
     width: 207px
     border-radius: 10px
     position: relative
     overflow: hidden
+    &:hover
+      cursor: pointer
   &__img
     position: absolute
     top: 0
@@ -1354,14 +1362,14 @@ iframe
   &-hide
     position: absolute
     top: 0
-    left: 100%
-    height: 100%
-    width: 100%
-    transition: left 0.3s ease-in-out
+    left: 270px
+    height: 207px
+    width: 207px
     background-color: rgba($black, 0.8)
     border-radius: 10px
     padding-top: 20px
     padding-left: 13px
+    z-index: 2
     &__text
       font-size: 20px
       color: $white
@@ -1378,30 +1386,32 @@ iframe
         right: 17px
       span
         +bold()
-  &-photo:hover .letters-hide
-    left: 0
-    transition: left 0.3s ease-in-out
-  &-circles
-    margin-left: 0
-    margin: 0 48px
   &-controls
-    margin-top: 54px
-    z-index: 2
-    &__btn
-      height: 46px
-      width: 46px
-      border-radius: 50%
-      background-color: $black
-      border: none
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 83px
+    &__prev, &__next
       &:hover
         cursor: pointer
-      img
-        width: 11px
-        transform: rotate(90deg)
-        margin-bottom: 2px
-    &__btn:last-child
-      img
-        transform: rotate(-90deg)
+    &__prev
+      margin-right: 15px
+    &__next
+      margin-left: 15px
+    &__bullet
+      display: block
+      height: 12px
+      width: 12px
+      border-radius: 50%
+      background-color: rgba($gray, 0.2)
+      &:hover
+        cursor: pointer
+      &_active
+        background-color: rgba($gray, 0.8)
+.swiper-pagination-bullets
+  width: 200px
+  display: flex
+  justify-content: space-around
 
 // Questions section
 .questions

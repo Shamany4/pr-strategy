@@ -12,7 +12,7 @@ const AboutSection = () => {
       <div className="container">
         <div className="d-flex">
           <img src={image} alt="Скриншот инстаграмма" className="about__image" data-aos="fade-right" />
-          <div className="d-flex flex-column align-end about__content">
+          <div className="d-flex flex-column about__content">
             <div className="about-title">
               <h3 className="about__title"
                 data-aos="slide-left"
@@ -37,8 +37,6 @@ const AboutSection = () => {
                 по&nbsp;продажам &laquo;здесь и&nbsp;сейчас&raquo;.</p>
             </div>
             <div className="about-consultation" data-aos="slide-up">
-              <h4 className="about-consultation__title">Вас проконсультируют</h4>
-              <p className="about-consultation__text">наши ведущие специалисты</p>
               <ArrowCircle
                 secondClass="about-consultation_circle"
                 height={46}
@@ -51,6 +49,10 @@ const AboutSection = () => {
                 heightSVG={13}
                 widthSVG={13}
               />
+              <div>
+                <h4 className="about-consultation__title">Вас проконсультируют</h4>
+                <p className="about-consultation__text">наши ведущие специалисты</p>
+              </div>
             </div>
             <div className="about-figure">
               <div className="about-figure__line"></div>

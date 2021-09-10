@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-scroll";
 
 import Follow from '../components/Follow';
 import AudioPlayer from "../components/AudioPlayer";
@@ -50,7 +51,13 @@ const HomeSection = () => {
                 от&nbsp;узнаваемости
                 компании...</p>
             </div>
-            <a href="#" className="button dividends__link" data-aos="fade-up">уже сейчас</a>
+            <Link className="button dividends__link"
+                  data-aos="fade-up"
+                  to="questions"
+                  spy={true}
+                  smooth={true}
+                  duration={1500}
+            >уже сейчас</Link>
           </div>
         </div>
       </div>

@@ -5,8 +5,6 @@ const AudioPlayer = () => {
     <iframe
       frameBorder="0"
       style={{ border: 'none' }}
-      width={350}
-      height={350}
       title="player"
       src="https://music.yandex.ru/iframe/#playlist/shamanyyy4/1000"
     >Слушайте <a
