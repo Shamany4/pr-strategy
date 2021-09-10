@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/pr-strategy/static/css/main.9c84be6e.chunk.css",
-    "main.js": "/pr-strategy/static/js/main.ee9fd04d.chunk.js",
-    "main.js.map": "/pr-strategy/static/js/main.ee9fd04d.chunk.js.map",
-    "runtime-main.js": "/pr-strategy/static/js/runtime-main.4a7062aa.js",
-    "runtime-main.js.map": "/pr-strategy/static/js/runtime-main.4a7062aa.js.map",
-    "static/css/2.c8606595.chunk.css": "/pr-strategy/static/css/2.c8606595.chunk.css",
-    "static/js/2.5847e9df.chunk.js": "/pr-strategy/static/js/2.5847e9df.chunk.js",
-    "static/js/2.5847e9df.chunk.js.map": "/pr-strategy/static/js/2.5847e9df.chunk.js.map",
-    "static/js/3.26e04f52.chunk.js": "/pr-strategy/static/js/3.26e04f52.chunk.js",
-    "static/js/3.26e04f52.chunk.js.map": "/pr-strategy/static/js/3.26e04f52.chunk.js.map",
+    "main.css": "/pr-strategy/static/css/main.8356be2d.chunk.css",
+    "main.js": "/pr-strategy/static/js/main.1f674ba0.chunk.js",
+    "main.js.map": "/pr-strategy/static/js/main.1f674ba0.chunk.js.map",
+    "runtime-main.js": "/pr-strategy/static/js/runtime-main.b7a811c4.js",
+    "runtime-main.js.map": "/pr-strategy/static/js/runtime-main.b7a811c4.js.map",
+    "static/css/2.a0a1c007.chunk.css": "/pr-strategy/static/css/2.a0a1c007.chunk.css",
+    "static/js/2.5400c2ca.chunk.js": "/pr-strategy/static/js/2.5400c2ca.chunk.js",
+    "static/js/2.5400c2ca.chunk.js.map": "/pr-strategy/static/js/2.5400c2ca.chunk.js.map",
+    "static/js/3.4a3a4d73.chunk.js": "/pr-strategy/static/js/3.4a3a4d73.chunk.js",
+    "static/js/3.4a3a4d73.chunk.js.map": "/pr-strategy/static/js/3.4a3a4d73.chunk.js.map",
     "index.html": "/pr-strategy/index.html",
-    "static/css/2.c8606595.chunk.css.map": "/pr-strategy/static/css/2.c8606595.chunk.css.map",
-    "static/css/main.9c84be6e.chunk.css.map": "/pr-strategy/static/css/main.9c84be6e.chunk.css.map",
-    "static/js/2.5847e9df.chunk.js.LICENSE.txt": "/pr-strategy/static/js/2.5847e9df.chunk.js.LICENSE.txt",
+    "static/css/2.a0a1c007.chunk.css.map": "/pr-strategy/static/css/2.a0a1c007.chunk.css.map",
+    "static/css/main.8356be2d.chunk.css.map": "/pr-strategy/static/css/main.8356be2d.chunk.css.map",
+    "static/js/2.5400c2ca.chunk.js.LICENSE.txt": "/pr-strategy/static/js/2.5400c2ca.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pr-strategy/static/media/Futura-PT-Heavy.c957cf0d.ttf",
     "static/media/calendar.0108f960.svg": "/pr-strategy/static/media/calendar.0108f960.svg",
     "static/media/style.sass": "/pr-strategy/static/media/section-bg.a79c3fff.png",
@@ -35,10 +35,10 @@
     "static/media/whiteArrow.e2cac21f.svg": "/pr-strategy/static/media/whiteArrow.e2cac21f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4a7062aa.js",
-    "static/css/2.c8606595.chunk.css",
-    "static/js/2.5847e9df.chunk.js",
-    "static/css/main.9c84be6e.chunk.css",
-    "static/js/main.ee9fd04d.chunk.js"
+    "static/js/runtime-main.b7a811c4.js",
+    "static/css/2.a0a1c007.chunk.css",
+    "static/js/2.5400c2ca.chunk.js",
+    "static/css/main.8356be2d.chunk.css",
+    "static/js/main.1f674ba0.chunk.js"
   ]
 }
