@@ -6,6 +6,10 @@
     order: 2
   .m-follow
     bottom: 60% !important
+@media screen and (max-width: 1245px)
+  .letters
+    &-hide
+      left: 165px
 @media screen and (max-width: 1140px)
   .container
     width: 960px
@@ -344,12 +348,15 @@
       flex-basis: 50%
       margin-left: 0
       margin-top: -50px
-      padding: 20px
+      padding: 20px 50px
       display: flex
       flex-direction: column
       text-align: center
       justify-content: center
       align-items: center
+      &__text
+        br
+          display: none
       &__title
         margin-top: 60px
       &_circle
@@ -403,7 +410,7 @@
       margin-top: 151px
       margin-left: -153px
     &__description
-      margin-right: 86px
+      margin-left: 50px
     &__text
       &::after
         display: none
@@ -411,10 +418,10 @@
       display: none
     &-consultation
       margin-top: 50px
-      display: flex
-      flex-direction: column
-      justify-content: flex-start
-      align-items: flex-start
+      margin-left: 50px
+      align-items: center
+      div:last-child
+        margin-top: 0
   .person
     &__section
       height: 760px
@@ -520,8 +527,8 @@
     margin: 0 auto
     box-shadow: 10px 10px 15px rgba($gray, 0.2)
   .letters
-    &-circles
-      display: flex
+    &-hide
+      display: none
   .questions
     &__section
       padding: 150px 0
@@ -610,6 +617,7 @@
       display: none
     &-description
       margin-right: 0
+      margin-top: 30px
     &__title
       margin-top: 0
       font-size: 158px
@@ -625,7 +633,7 @@
       width: 100%
       align-items: center
     &__description
-      margin-right: 0
+      margin-left: 0
       text-align: center
       display: flex
       flex-direction: column
@@ -634,8 +642,8 @@
       width: 100%
       margin-top: 30px
     &-consultation
-      margin-right: 0
-      text-align: center
+      margin-left: 0
+      text-align: left
       display: flex
       &__text
         font-size: 18px
@@ -688,22 +696,16 @@
     &-photo
       width: 60%
       height: 400px
-    &-hide
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      padding: 0
-      &__text
-        width: 80%
-        font-size: 25px
-        text-align: center
-        &::after
-          display: none
 @media screen and (max-width: 627px)
   iframe
     width: 100%
     height: 500px
+  .swiper
+    &-container
+      height: 300px
+  .player
+    &-speaker
+      margin-top: 60px
 @media screen and (max-width: 576px)
   .calendar
     &-widget
@@ -731,12 +733,14 @@
   .stage
     &__content
       padding-top: 50px
+    &__section
+      padding-bottom: 650px
   .step
     &__block
       width: 100%
   .feedback
     &-description
-      margin-top: 110px
+      margin-top: 40px
     &-aside
       width: 90%
     &__title
@@ -749,6 +753,9 @@
       margin-top: 255px
     &__title
       font-size: 80px
+    &-consultation
+      div:last-child
+        margin-left: 15px
   .portfolio
     &__title
       font-size: 50px
@@ -757,7 +764,7 @@
         font-size: 20px
   .player
     &-widget
-      width: 70%
+      width: 60%
       &-controls
         &__btn:nth-child(2)
           width: 73px
@@ -774,7 +781,7 @@
   .swiper
     &-container
       width: 90%
-      height: 650px
+      height: 585px
       padding-bottom: 50px
       margin-bottom: 20px
       margin-top: 10px
@@ -782,6 +789,7 @@
     width: 80%
     height: auto
     &__content
+      width: 100%
       flex-direction: column
       align-items: center
       text-align: center
@@ -809,6 +817,10 @@
     &-photo
       width: 80%
       height: 450px
+@media screen and (max-width: 481px)
+  .swiper
+    &-container
+      height: 285px
 @media screen and (max-width: 430px)
   .calendar
     &-widget
@@ -865,7 +877,7 @@
         bottom: 15px
   .stage
     &__section
-      padding-bottom: 410px
+      padding-bottom: 560px
     &__content
       padding-top: 0
   .step
@@ -879,6 +891,8 @@
         width: 20px
         margin-left: 10px
   .feedback
+    &-description
+      margin-top: 0
     &__heading
       text-align: center
       font-size: 30px
@@ -896,6 +910,9 @@
   .about
     &__title
       width: 100%
+    &-consultation
+      &__title
+        font-size: 18px
   .person
     &__section
       padding-bottom: 30px
@@ -909,10 +926,12 @@
   .player
     &-widget
       width: 100%
+      margin-top: 50px
     &-speaker
       background-color: blue
       height: 250px
       width: 250px
+      margin-top: 30px
       &-preview
         height: 250px
         width: 250px
@@ -936,6 +955,7 @@
       max-height: 30px !important
   .swiper
     &-container
+      height: 304px
       width: 100%
   .case
     width: 95%
@@ -952,3 +972,5 @@
       top: -76px
       right: 38px
       width: 50%
+  .swiper-pagination-bullets
+    width: 150px

@@ -45,7 +45,7 @@ const HomeSection = () => {
               который появился, хайпанул&nbsp;и... умер?</p>
           </div>
           <div className="dividends dividends__content">
-            <div className="dividends-block" data-aos="fade-left">
+            <div className="dividends-block" data-aos="fade-left" data-aos-offset="-200">
               <p className="section-subtitle dividends__text">...извлекайте
                 дивиденды
                 от&nbsp;узнаваемости
@@ -53,6 +53,7 @@ const HomeSection = () => {
             </div>
             <Link className="button dividends__link"
                   data-aos="fade-up"
+                  data-aos-offset="-200"
                   to="questions"
                   spy={true}
                   smooth={true}

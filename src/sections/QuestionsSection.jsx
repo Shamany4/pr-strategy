@@ -16,6 +16,7 @@ const QuestionsSection = () => {
           </div>
           <button className="questions__link"
                   data-aos="fade-left"
+                  data-aos-offset="-100"
                   onClick={() => {
                     window.open('https://www.google.ru/forms/about/')
                   }}
