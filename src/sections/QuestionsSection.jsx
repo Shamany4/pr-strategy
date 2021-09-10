@@ -12,7 +12,17 @@ const QuestionsSection = () => {
           <div className="d-flex flex-column questions__block">
             <h3 className="questions__subtitle" data-aos="fade-right">Остались вопросы?</h3>
             <p className="questions__text section-subtitle" data-aos="fade-up">Получите консультацию
-              наших специалистов</p>
+              наших специалистов...</p>
+            <span className="questions__span section-subtitle"
+                  onClick={() => {
+                    window.open('mailto:info@tbp.agency');
+                  }}
+            >info@tbp.agency</span>
+            <span className="questions__span section-subtitle"
+                  onClick={() => {
+                    window.open('tel:+74994906289');
+                  }}
+            >+7 499 490-62-89</span>
           </div>
           <button className="questions__link"
                   data-aos="fade-left"

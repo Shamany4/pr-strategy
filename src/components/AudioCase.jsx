@@ -18,7 +18,7 @@ const AudioCase = ({ name, preview, isPlay, isReady, setPlay, playFunc, pauseFun
   }
 
   return (
-    <div className="case" data-aos="fade-up">
+    <div className="case">
       <div className="d-flex align-center justify-between case__content">
         <div className="case-photo">
           <img src={setPreview().default} alt="Превью обложки" className="case-photo__preview" />

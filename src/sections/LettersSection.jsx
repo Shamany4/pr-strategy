@@ -1,9 +1,9 @@
 import { React, useEffect } from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper.scss';
-import LettersBlock from '../components/LettersBlock';
 
-import whiteArrow from '../assets/icons/whiteArrow.svg';
+
+import LettersBlock from '../components/LettersBlock';
 import ArrowCircle from "../components/ArrowCircle";
 
 const LettersSection = () => {
@@ -34,16 +34,16 @@ const LettersSection = () => {
           centeredSlides: true
         },
         // when window width is >= 480px
-        480: {
-          slidesPerView: 1,
+        430: {
+          slidesPerView: 2,
           spaceBetween: 0,
           centeredSlides: true
         },
         // when window width is >= 640px
         576: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          centeredSlides: true
+          slidesPerView: 3,
+          spaceBetween: 20,
+          centeredSlides: false
         },
         712: {
           slidesPerView: 4,
@@ -72,9 +72,6 @@ const LettersSection = () => {
   return (
     <section className="letters letters__section">
       <div className="letters__content">
-        <div className="letters-hide">
-          <p className="letters-hide__text"><span>Благодарственные письма</span> о нашей работе </p>
-        </div>
         <div className="letters-container">
           <div className="swiper-wrapper">
             <div className="swiper-slide"><LettersBlock path="letters_1.webp"/></div>

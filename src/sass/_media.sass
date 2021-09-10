@@ -279,11 +279,7 @@
       svg
         height: 25px
         width: 25px
-      &:hover, &:focus
-        cursor: pointer
-        svg
-          fill: url(#drop-block-gradient)
-          stroke: url(#drop-block-gradient)
+        fill: url(#drop-block-gradient)
     &__name
       margin-top: 5px
     &__follow
@@ -301,8 +297,12 @@
       font-size: 90px
       text-align: center
       animation: none
+      display: none
     &__circles
       display: none
+  .m-home
+    &__title
+      display: block
   .circles__block
     display: none
   .blockquote
@@ -526,9 +526,6 @@
   .case
     margin: 0 auto
     box-shadow: 10px 10px 15px rgba($gray, 0.2)
-  .letters
-    &-hide
-      display: none
   .questions
     &__section
       padding: 150px 0
@@ -680,6 +677,13 @@
       font-size: 90px
       top: 58px
       left: 22px
+      color: rgba($gray, 0.1)
+    &__image
+      top: 128px
+      right: 30px
+      opacity: 0.5
+    &__span
+      font-size: 20px
     &__block
       width: 100%
       margin-left: 0
@@ -689,16 +693,15 @@
       &::before
         display: none
     &__link
-      margin: 0
-      margin-top: 40px
+      margin: 40px 0 0 0
 @media screen and (max-width: 711px)
   .letters
     &-block
       display: flex
       justify-content: center
     &-photo
-      width: 60%
-      height: 400px
+      width: 200px
+      height: 200px
 @media screen and (max-width: 627px)
   iframe
     width: 100%
@@ -714,6 +717,8 @@
     &__section
       padding-top: 200px
 @media screen and (max-width: 576px)
+  iframe
+    display: none
   .calendar
     &-widget
       height: 65px
@@ -748,12 +753,14 @@
     &__name
       font-size: 30px
     &__desc
-      width: 98%
+      width: 90%
       font-size: 18px
+    &__post
+      width: 90%
   .stage
     &__section
       padding-top: 170px
-      padding-bottom: 650px
+      padding-bottom: 580px
   .step
     &__block
       width: 100%
@@ -833,8 +840,8 @@
         margin-top: 3px
   .letters
     &-photo
-      width: 80%
-      height: 450px
+      width: 200px
+      height: 200px
 @media screen and (max-width: 481px)
   .swiper
     &-container
@@ -886,7 +893,7 @@
       font-size: 16px
   .experience
     &__section
-      height: 550px
+      height: 610px
     &__title
       font-size: 40px
       line-height: 40px
@@ -978,20 +985,48 @@
     &-container
       height: 304px
       width: 100%
+      margin-top: 20px
+  .slider
+    &__prev
+      margin-bottom: 0
   .case
-    width: 95%
+    width: 85%
+    height: 283px
+    &__content
+      height: 100%
+      justify-content: space-between
+    &-info
+      width: 100%
+      margin: 0
+      text-align: center
+      &__desc
+        font-size: 16px
+        margin-top: 5px
   .letters
     &-photo
-      width: 95%
-      height: 420px
+      width: 250px
+      height: 250px
   .questions
     &__title
       display: none
+    &__subtitle
+      font-size: 30px
+      line-height: 40px
     &__link
       width: 100%
+    &__span
+      font-size: 18px
     &__image
       top: -76px
       right: 38px
       width: 50%
   .swiper-pagination-bullets
-    width: 150px
+    width: 180px
+@media screen and (max-width: 351px)
+  .stage
+    &__section
+      padding-bottom: 600px
+@media screen and (max-width: 341px)
+  .person
+    &__section
+      height: 720px
