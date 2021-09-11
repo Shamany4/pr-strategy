@@ -1,14 +1,10 @@
-import { React, useEffect, useState, useRef } from 'react';
-import Swiper from 'swiper';
+import React, { useEffect, useState, useRef } from 'react';
 import 'swiper/swiper.scss';
 
 import photo_1 from '../assets/image/photo_1.webp';
 import photo_2 from '../assets/image/photo_2.webp';
-import insta_1 from '../assets/image/insta_1.webp';
-import insta_2 from '../assets/image/insta_2.webp';
 
 import PersonSocialLink from "../components/PersonSocialLink";
-import ArrowCircle from "../components/ArrowCircle";
 
 
 const PersonSection = () => {
@@ -31,18 +27,6 @@ const PersonSection = () => {
       setActive(!active);
     })
   }, [active])
-
-  useEffect(() => {
-    new Swiper('.person-container', {
-      direction: 'horizontal',
-      slidesPerView: 1,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.m-person-button__next',
-        prevEl: '.m-person-button__prev',
-      },
-    });
-  }, []);
 
   return (
     <section className="person person__section d-flex">
