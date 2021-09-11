@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/pr-strategy/static/css/main.d4fc5781.chunk.css",
-    "main.js": "/pr-strategy/static/js/main.a4e509ba.chunk.js",
-    "main.js.map": "/pr-strategy/static/js/main.a4e509ba.chunk.js.map",
+    "main.css": "/pr-strategy/static/css/main.82095282.chunk.css",
+    "main.js": "/pr-strategy/static/js/main.e0e73211.chunk.js",
+    "main.js.map": "/pr-strategy/static/js/main.e0e73211.chunk.js.map",
     "runtime-main.js": "/pr-strategy/static/js/runtime-main.206efd28.js",
     "runtime-main.js.map": "/pr-strategy/static/js/runtime-main.206efd28.js.map",
     "static/css/2.a0a1c007.chunk.css": "/pr-strategy/static/css/2.a0a1c007.chunk.css",
@@ -12,14 +12,12 @@
     "static/js/3.4ba1ce59.chunk.js.map": "/pr-strategy/static/js/3.4ba1ce59.chunk.js.map",
     "index.html": "/pr-strategy/index.html",
     "static/css/2.a0a1c007.chunk.css.map": "/pr-strategy/static/css/2.a0a1c007.chunk.css.map",
-    "static/css/main.d4fc5781.chunk.css.map": "/pr-strategy/static/css/main.d4fc5781.chunk.css.map",
+    "static/css/main.82095282.chunk.css.map": "/pr-strategy/static/css/main.82095282.chunk.css.map",
     "static/js/2.5df70603.chunk.js.LICENSE.txt": "/pr-strategy/static/js/2.5df70603.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pr-strategy/static/media/Futura-PT-Heavy.c957cf0d.ttf",
     "static/media/businnes.28814815.webp": "/pr-strategy/static/media/businnes.28814815.webp",
     "static/media/calendar.0108f960.svg": "/pr-strategy/static/media/calendar.0108f960.svg",
     "static/media/style.sass": "/pr-strategy/static/media/section-bg.4ae99fb6.webp",
-    "static/media/insta_1.21ea7add.webp": "/pr-strategy/static/media/insta_1.21ea7add.webp",
-    "static/media/insta_2.213eab84.webp": "/pr-strategy/static/media/insta_2.213eab84.webp",
     "static/media/instagram-screen.483488af.webp": "/pr-strategy/static/media/instagram-screen.483488af.webp",
     "static/media/letters_1.webp": "/pr-strategy/static/media/letters_1.fd10d4a3.webp",
     "static/media/letters_10.webp": "/pr-strategy/static/media/letters_10.f149a61d.webp",
@@ -58,7 +56,7 @@
     "static/js/runtime-main.206efd28.js",
     "static/css/2.a0a1c007.chunk.css",
     "static/js/2.5df70603.chunk.js",
-    "static/css/main.d4fc5781.chunk.css",
-    "static/js/main.a4e509ba.chunk.js"
+    "static/css/main.82095282.chunk.css",
+    "static/js/main.e0e73211.chunk.js"
   ]
 }
