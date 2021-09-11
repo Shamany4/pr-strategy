@@ -154,7 +154,7 @@ const PersonSection = () => {
             <button
               className={!active ? 'person__link person__link_igor' : 'person__link'}
               ref={buttonRef}
-              onClick={() => openUrlHandler(!active ? 'https://vk.com/igor_malinin' : 'https://vk.com/julinnmilli')}
+              onClick={() => openUrlHandler(!active ? 'https://www.instagram.com/igormalinin.ru/' : 'https://www.instagram.com/julinn_ita/')}
             >
               {!active ? '@igormalinin.ru' : '@milevskaya_pr_jvm'}
             </button>
