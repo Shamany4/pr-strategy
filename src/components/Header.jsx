@@ -25,7 +25,7 @@ const Header = () => {
                 <div className="drop-block-card d-flex flex-column align-center">
                   <button
                     className="drop-block__icon"
-                    onClick={() => openUrlHandler('')}
+                    onClick={() => openUrlHandler('https://t.me/igor_malinin')}
                   >
                     <svg viewBox="0 0 29 29">
                       <linearGradient id="drop-block-gradient">
