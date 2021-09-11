@@ -24,7 +24,7 @@ const PlayerWidget = ({ isPlay, endPlaylist, isReady, setPlay, useRef, playFunc,
         <span className="player-widget-info__name">Кейс {current.count}</span>
         <p className="player-widget-info__desc">{current.name}</p>
       </div>
-      <div ref={useRef} id="waveform" style={{ maxHeight: 30, width: 150 }}></div>
+      <div ref={useRef} id="waveform"></div>
       {
         !isReady ? <span>Аудио загружается...</span> : null
       }

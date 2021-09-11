@@ -28,7 +28,7 @@ const QuestionsSection = () => {
                   data-aos="fade-left"
                   data-aos-offset="-100"
                   onClick={() => {
-                    window.open('https://www.google.ru/forms/about/')
+                    window.open('https://forms.gle/wgjWmvvRAZeyvFe17')
                   }}
           >Получить предложение</button>
         </div>

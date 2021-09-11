@@ -16,8 +16,8 @@ const Follow = ({ bottom, right, left }) => {
       <span className={left ? 'follow__span follow__span_active' : 'follow__span'}>Follow us</span>
       <button
         className={left ? 'follow__link follow__link_active' : 'follow__link'}
-        onClick={() => openUrlHandler('https://www.instagram.com/tbp.agency/?hl=ru')}
-        title="https://www.instagram.com/tbp.agency/?hl=ru"
+        onClick={() => openUrlHandler('https://www.instagram.com/tbp.agency/')}
+        title="https://www.instagram.com/tbp.agency/"
       >
         <svg viewBox="0 0 27.83 27.83" fill="white" stroke="none">
           <linearGradient id="follow-gradient">
@@ -32,6 +32,7 @@ const Follow = ({ bottom, right, left }) => {
       <button
         className={left ? 'follow__link follow__link_active' : 'follow__link'}
         onClick={() => openUrlHandler('https://www.behance.net/thebusinesspill/')}
+        title="https://www.behance.net/thebusinesspill/"
       >
         <svg viewBox="0 0 27.83 27.83" fill="white" stroke="none" strokeWidth={1} >
           <linearGradient id="follow-gradient">

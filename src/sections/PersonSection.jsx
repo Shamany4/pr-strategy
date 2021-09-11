@@ -197,7 +197,7 @@ const PersonSection = () => {
           <ul className="person-social">
             <PersonSocialLink
               viewBox="0 0 27.84 27.83"
-              url="https://ru-ru.facebook.com/"
+              url={active ? 'https://www.facebook.com/juna.milevskaya' : 'https://www.facebook.com/artijado/'}
               path_1="M26.64,4.65a9.2,9.2,0,0,0-8-4.65H9.19a9.18,9.18,0,0,0-8,4.67A9.07,9.07,0,0,0,0,9.19v9.45a9.1,9.1,0,0,0,1.19,4.52,9.22,9.22,0,0,0,3.05,3.22,9.09,9.09,0,0,0,4.95,1.45h9.45a9.09,9.09,0,0,0,4.95-1.45,9.22,9.22,0,0,0,3-3.2,9.08,9.08,0,0,0,1.21-4.54V9.19A9.15,9.15,0,0,0,26.64,4.65Zm-1,14a7,7,0,0,1-7,7H18v-8h3V13.89H18v-2c0-.49.13-.84.74-.84h2.31V6.79H18.48A4.92,4.92,0,0,0,13.73,12v1.9H11v3.79h2.77v8H9.19a7,7,0,0,1-7-7V9.19a7,7,0,0,1,7-7h9.45a7,7,0,0,1,7,7Z"
             />
             <PersonSocialLink
@@ -208,7 +208,7 @@ const PersonSection = () => {
             />
             <PersonSocialLink
               viewBox="0 0 27.83 27.83"
-              url={active ? 'https://www.instagram.com/milevskaya_pr_jvm/' : 'https://www.instagram.com/igormalinin.ru/'}
+              url={active ? 'https://www.instagram.com/julinn_ita/' : 'https://www.instagram.com/igormalinin.ru/'}
               path_1="M13.92,21A7.07,7.07,0,1,1,21,13.92,7.07,7.07,0,0,1,13.92,21ZM13.92,9a4.88,4.88,0,1,0,4.87,4.88A4.89,4.89,0,0,0,13.92,9Z"
               circle={true}
               cx={21.15}
@@ -264,7 +264,7 @@ const PersonSection = () => {
                   <ul className="person-social m-person-social-list">
                     <PersonSocialLink
                       viewBox="0 0 27.84 27.83"
-                      url="https://ru-ru.facebook.com/"
+                      url="https://www.facebook.com/artijado/"
                       mobile={true}
                       path_1="M26.64,4.65a9.2,9.2,0,0,0-8-4.65H9.19a9.18,9.18,0,0,0-8,4.67A9.07,9.07,0,0,0,0,9.19v9.45a9.1,9.1,0,0,0,1.19,4.52,9.22,9.22,0,0,0,3.05,3.22,9.09,9.09,0,0,0,4.95,1.45h9.45a9.09,9.09,0,0,0,4.95-1.45,9.22,9.22,0,0,0,3-3.2,9.08,9.08,0,0,0,1.21-4.54V9.19A9.15,9.15,0,0,0,26.64,4.65Zm-1,14a7,7,0,0,1-7,7H18v-8h3V13.89H18v-2c0-.49.13-.84.74-.84h2.31V6.79H18.48A4.92,4.92,0,0,0,13.73,12v1.9H11v3.79h2.77v8H9.19a7,7,0,0,1-7-7V9.19a7,7,0,0,1,7-7h9.45a7,7,0,0,1,7,7Z"
                     />
@@ -317,7 +317,7 @@ const PersonSection = () => {
                   <ul className="person-social m-person-social-list">
                     <PersonSocialLink
                       viewBox="0 0 27.84 27.83"
-                      url="https://ru-ru.facebook.com/"
+                      url="https://www.facebook.com/juna.milevskaya"
                       mobile={true}
                       path_1="M26.64,4.65a9.2,9.2,0,0,0-8-4.65H9.19a9.18,9.18,0,0,0-8,4.67A9.07,9.07,0,0,0,0,9.19v9.45a9.1,9.1,0,0,0,1.19,4.52,9.22,9.22,0,0,0,3.05,3.22,9.09,9.09,0,0,0,4.95,1.45h9.45a9.09,9.09,0,0,0,4.95-1.45,9.22,9.22,0,0,0,3-3.2,9.08,9.08,0,0,0,1.21-4.54V9.19A9.15,9.15,0,0,0,26.64,4.65Zm-1,14a7,7,0,0,1-7,7H18v-8h3V13.89H18v-2c0-.49.13-.84.74-.84h2.31V6.79H18.48A4.92,4.92,0,0,0,13.73,12v1.9H11v3.79h2.77v8H9.19a7,7,0,0,1-7-7V9.19a7,7,0,0,1,7-7h9.45a7,7,0,0,1,7,7Z"
                     />
@@ -330,7 +330,7 @@ const PersonSection = () => {
                     />
                     <PersonSocialLink
                       viewBox="0 0 27.83 27.83"
-                      url="https://www.instagram.com/milevskaya_pr_jvm/"
+                      url="https://www.instagram.com/julinn_ita/"
                       mobile={true}
                       path_1="M13.92,21A7.07,7.07,0,1,1,21,13.92,7.07,7.07,0,0,1,13.92,21ZM13.92,9a4.88,4.88,0,1,0,4.87,4.88A4.89,4.89,0,0,0,13.92,9Z"
                       circle={true}

@@ -1216,8 +1216,10 @@ iframe
 #m-player-speaker
   display: none
 #waveform
+  min-height: 60px
+  width: 150px
   canvas, wave
-    max-height: 30px
+    max-height: 60px
     cursor: pointer
 .enjoy
   color: $white
@@ -1248,7 +1250,7 @@ iframe
       margin-bottom: 8px
 .swiper
   &-container
-    height: 678px
+    height: 628px
 .slider
   position: relative
   &__next, &__prev
@@ -1269,6 +1271,8 @@ iframe
     img
       transform: rotate(180deg)
       margin-bottom: 2px
+  &__next
+    margin-top: 20px
 .case
   width: 453px
   height: 80px
@@ -1278,7 +1282,6 @@ iframe
   display: flex
   justify-content: space-between
   align-items: center
-  margin-bottom: -30px
   &-photo
     position: relative
     height: 45px

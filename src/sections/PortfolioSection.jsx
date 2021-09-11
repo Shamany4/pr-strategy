@@ -52,6 +52,7 @@ const PortfolioSection = () => {
     new Swiper('.swiper-container', {
       direction: 'vertical',
       slidesPerView: 6,
+      spaceBetween: 30,
       allowTouchMove: false,
       // Navigation arrows
       navigation: {
@@ -61,22 +62,22 @@ const PortfolioSection = () => {
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 30,
+          spaceBetween: 0
         },
         // when window width is >= 480px
         480: {
           slidesPerView: 2,
+          spaceBetween: 0
         },
-        577: {
+        576: {
           slidesPerView: 3,
+          spaceBetween: 0
         },
-        640: {
+        768: {
           slidesPerView: 4,
+          spaceBetween: 0
         },
         992: {
-          slidesPerView: 6,
-        },
-        1140: {
           slidesPerView: 6
         }
       }
@@ -122,7 +123,7 @@ const PortfolioSection = () => {
           finish: false
         })
       } else {
-        if (currentIndex === 2) {
+        if (currentIndex === 6) {
           setEndPlaylist({
             start: false,
             finish: true
@@ -151,7 +152,7 @@ const PortfolioSection = () => {
           setPlaying(true);
         }
       });
-      if (currentIndex === 2) {
+      if (currentIndex === 6) {
         wavesurfer.on('finish', function () {
           setCurrentIndex(0);
         });
@@ -185,9 +186,9 @@ const PortfolioSection = () => {
     circleRef.current.style.transition = '0.5s';
 
     const radius_2 = circleRef_2.current.r.baseVal.value;
-    const circumference_2 = 2 * Math.PI * radius;
-    circleRef_2.current.style.strokeDasharray = ` ${circumference} ${circumference} `;
-    circleRef_2.current.style.strokeDashoffset = circumference;
+    const circumference_2 = 2 * Math.PI * radius_2;
+    circleRef_2.current.style.strokeDasharray = ` ${circumference_2} ${circumference_2} `;
+    circleRef_2.current.style.strokeDashoffset = circumference_2;
 
     let offset_2 = circumference_2 - percent / 100 * circumference_2;
     circleRef_2.current.style.strokeDashoffset = offset_2;
