@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pr-strategy/static/css/main.018383c1.chunk.css",
-    "main.js": "/pr-strategy/static/js/main.f4c40e52.chunk.js",
-    "main.js.map": "/pr-strategy/static/js/main.f4c40e52.chunk.js.map",
+    "main.js": "/pr-strategy/static/js/main.386d550e.chunk.js",
+    "main.js.map": "/pr-strategy/static/js/main.386d550e.chunk.js.map",
     "runtime-main.js": "/pr-strategy/static/js/runtime-main.78789373.js",
     "runtime-main.js.map": "/pr-strategy/static/js/runtime-main.78789373.js.map",
     "static/css/2.a0a1c007.chunk.css": "/pr-strategy/static/css/2.a0a1c007.chunk.css",
@@ -51,6 +51,6 @@
     "static/css/2.a0a1c007.chunk.css",
     "static/js/2.5400c2ca.chunk.js",
     "static/css/main.018383c1.chunk.css",
-    "static/js/main.f4c40e52.chunk.js"
+    "static/js/main.386d550e.chunk.js"
   ]
 }
