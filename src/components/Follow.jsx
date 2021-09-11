@@ -19,7 +19,7 @@ const Follow = ({ bottom, right, left }) => {
         onClick={() => openUrlHandler('https://www.instagram.com/tbp.agency/?hl=ru')}
         title="https://www.instagram.com/tbp.agency/?hl=ru"
       >
-        <svg viewBox="0 0 27.83 27.83" fill="white" stroke="white" strokeWidth={1} >
+        <svg viewBox="0 0 27.83 27.83" fill="white" stroke="none">
           <linearGradient id="follow-gradient">
             <stop offset="0%" stopColor="#C14C45" />
             <stop offset="100%" stopColor="#FF6E65" />
@@ -33,7 +33,7 @@ const Follow = ({ bottom, right, left }) => {
         className={left ? 'follow__link follow__link_active' : 'follow__link'}
         onClick={() => openUrlHandler('https://www.behance.net/thebusinesspill/')}
       >
-        <svg viewBox="0 0 27.83 27.83" fill="white" stroke="white" strokeWidth={1} >
+        <svg viewBox="0 0 27.83 27.83" fill="white" stroke="none" strokeWidth={1} >
           <linearGradient id="follow-gradient">
             <stop offset="0%" stopColor="#C14C45" />
             <stop offset="100%" stopColor="#FF6E65" />

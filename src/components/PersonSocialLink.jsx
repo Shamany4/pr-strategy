@@ -9,7 +9,7 @@ const PersonSocialLink = ({ path_1, path_2, circle, cx, cy, r, viewBox, url, mob
       <button className="person-social__link m-person-social__link"
         onClick={() => openUrlHandler(url)}
       >
-        <svg viewBox={viewBox} fill="white" stroke="white" strokeWidth={1}>
+        <svg viewBox={viewBox} fill="white" stroke="none">
           <linearGradient id={!mobile ? 'social-gradient' : 'm-social-gradient'}>
             <stop offset="0%" stopColor="#FF6E65" />
             <stop offset="100%" stopColor="#C14C45" />

@@ -21,7 +21,7 @@ const Header = () => {
               <div className="drop-block-social drop-block-social_first d-flex">
                 <div className="drop-block-card d-flex flex-column align-center">
                   <div className="drop-block__icon">
-                    <svg viewBox="0 0 29 29" strokeWidth={1}>
+                    <svg viewBox="0 0 29 29">
                       <linearGradient id="drop-block-gradient">
                         <stop offset="0%" stopColor="#FF6E65" />
                         <stop offset="100%" stopColor="#C14C45" />
@@ -34,7 +34,7 @@ const Header = () => {
                 </div>
                 <div className="drop-block-card d-flex flex-column align-center">
                   <div className="drop-block__icon">
-                    <svg viewBox="0 0 29.5 29.2" strokeWidth={1}>
+                    <svg viewBox="0 0 29.5 29.2">
                       <linearGradient id="drop-block-gradient">
                         <stop offset="0%" stopColor="#FF6E65" />
                         <stop offset="100%" stopColor="#C14C45" />
@@ -47,7 +47,7 @@ const Header = () => {
                 </div>
                 <div className="drop-block-card d-flex flex-column align-center">
                   <div className="drop-block__icon">
-                    <svg viewBox="0 0 29.62 29.62" strokeWidth={1}>
+                    <svg viewBox="0 0 29.62 29.62">
                       <linearGradient id="drop-block-gradient">
                         <stop offset="0%" stopColor="#FF6E65" />
                         <stop offset="100%" stopColor="#C14C45" />
@@ -60,7 +60,7 @@ const Header = () => {
                 </div>
                 <div className="drop-block-card d-flex flex-column align-center">
                   <div className="drop-block__icon">
-                    <svg viewBox="0 0 29.24 29.24" strokeWidth={1}>
+                    <svg viewBox="0 0 29.24 29.24">
                       <linearGradient id="drop-block-gradient">
                         <stop offset="0%" stopColor="#FF6E65" />
                         <stop offset="100%" stopColor="#C14C45" />
@@ -79,7 +79,7 @@ const Header = () => {
               <div className="drop-block-social d-flex">
                 <div className="drop-block-card d-flex flex-column align-center">
                   <div className="drop-block__icon">
-                    <svg viewBox="0 0 27.83 27.83" strokeWidth={1}>
+                    <svg viewBox="0 0 27.83 27.83">
                       <linearGradient id="drop-block-gradient">
                         <stop offset="0%" stopColor="#FF6E65" />
                         <stop offset="100%" stopColor="#C14C45" />
@@ -93,7 +93,7 @@ const Header = () => {
                 </div>
                 <div className="drop-block-card d-flex flex-column align-center">
                   <div className="drop-block__icon">
-                    <svg viewBox="0 0 27.83 27.83" strokeWidth={1}>
+                    <svg viewBox="0 0 27.83 27.83">
                       <linearGradient id="drop-block-gradient">
                         <stop offset="0%" stopColor="#FF6E65" />
                         <stop offset="100%" stopColor="#C14C45" />

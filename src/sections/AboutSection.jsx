@@ -10,7 +10,14 @@ const AboutSection = () => {
       <Follow bottom={200} left={5 + '%'} />
       <div className="container">
         <div className="d-flex">
-          <img src={image} alt="Скриншот инстаграмма" className="about__image" data-aos="fade-right" />
+          <img src={image}
+               alt="Скриншот инстаграмма"
+               className="about__image"
+               data-aos="fade-right"
+               onClick={() => {
+                 window.open('https://www.instagram.com/');
+               }}
+          />
           <div className="d-flex flex-column about__content">
             <div className="about-title">
               <h3 className="about__title"

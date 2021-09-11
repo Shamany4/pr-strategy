@@ -279,6 +279,7 @@
       svg
         height: 25px
         width: 25px
+        stroke: none
         fill: url(#drop-block-gradient)
     &__name
       margin-top: 5px
@@ -424,7 +425,8 @@
         margin-top: 0
   .person
     &__section
-      height: 760px
+      height: auto
+      padding-bottom: 50px
     &__content, &-info, &-controls__btn, &-social
       display: none
   .m-person
@@ -434,8 +436,18 @@
     justify-content: center
     align-items: center
     &__content
-      margin-top: 80px
+      margin-top: 40px
       display: block
+      position: relative
+    &-button
+      &__prev, &__next
+        position: absolute
+        top: calc(50% - 23px)
+        z-index: 2
+      &__prev
+        left: 5px
+      &__next
+        right: 5px
     &__insta
       background: none
       border: none
@@ -742,9 +754,6 @@
     &-warning
       top: -20.25px
       left: calc(50% - 40.5px)
-  .person
-    &__section
-      height: 750px
     &-container
       min-width: 100%
   .m-person
@@ -806,7 +815,7 @@
   .swiper
     &-container
       width: 90%
-      height: 585px
+      height: 593px
       padding-bottom: 50px
       margin-bottom: 20px
       margin-top: 10px
@@ -845,7 +854,12 @@
 @media screen and (max-width: 481px)
   .swiper
     &-container
-      height: 285px
+      height: 304px
+      width: 100%
+      margin-top: 20px
+  .slider
+    &__prev
+      margin-bottom: 10px
 @media screen and (max-width: 430px)
   .calendar
     &-widget
@@ -943,14 +957,16 @@
     &-consultation
       &__title
         font-size: 18px
-  .person
-    &__section
-      height: 670px
   .m-person
-    &__content
-      margin-top: 35px
     &__insta
       font-size: 20px
+    &__name
+      width: 90%
+      text-align: center
+    &__post
+      width: 200px
+    &__desc
+      width: 85%
   .player
     &-widget
       width: 90%
@@ -981,14 +997,6 @@
     canvas, wave
       width: 100%
       max-height: 30px !important
-  .swiper
-    &-container
-      height: 304px
-      width: 100%
-      margin-top: 20px
-  .slider
-    &__prev
-      margin-bottom: 0
   .case
     width: 85%
     height: 283px

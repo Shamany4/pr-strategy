@@ -8,6 +8,7 @@ import insta_1 from '../assets/image/insta_1.webp';
 import insta_2 from '../assets/image/insta_2.webp';
 
 import PersonSocialLink from "../components/PersonSocialLink";
+import ArrowCircle from "../components/ArrowCircle";
 
 
 const PersonSection = () => {
@@ -35,9 +36,10 @@ const PersonSection = () => {
     new Swiper('.person-container', {
       direction: 'horizontal',
       slidesPerView: 1,
-      loop: true,
-      autoplay: {
-        delay: 10000,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.m-person-button__next',
+        prevEl: '.m-person-button__prev',
       },
     });
   }, []);
@@ -227,11 +229,6 @@ const PersonSection = () => {
         </div>
       </div>
 
-
-
-
-
-
       <div className="container m-person__content">
         <div className="person-container">
           <div className="swiper-wrapper">
@@ -347,6 +344,28 @@ const PersonSection = () => {
               </div>
             </div>
           </div>
+          <ArrowCircle
+            secondClass="m-person-button__prev"
+            height={30}
+            width={30}
+            background="transparent"
+            stroke="black"
+            strokeWidth={2}
+            angle={90}
+            heightSVG={11}
+            widthSVG={12}
+          />
+          <ArrowCircle
+            secondClass="m-person-button__next"
+            height={30}
+            width={30}
+            background="transparent"
+            stroke="black"
+            strokeWidth={2}
+            angle={-90}
+            heightSVG={11}
+            widthSVG={12}
+          />
         </div>
       </div>
     </section >
