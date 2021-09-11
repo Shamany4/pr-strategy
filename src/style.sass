@@ -867,6 +867,8 @@ iframe
       border: none
       border-radius: 50%
       position: relative
+      &_hide
+        display: none
       svg
         width: 20px
         height: 10px
@@ -960,17 +962,10 @@ iframe
     left: calc(50% - 98px)
     height: 197px
     width: 197px
-    &__image
-      border-radius: 50%
-      position: absolute
-      top: 0
-      left: 0
-      height: 100%
-      width: 100%
-      object-fit: cover
-      &_yuna
-        transform: scale(0)
-        transition: 0.5s
+    border-radius: 50%
+    background: url('./assets/image/insta_1.webp') no-repeat center center / cover
+    &_active
+      background: url('./assets/image/insta_2.webp') no-repeat center center / cover
   &-icons
     position: absolute
     bottom: 16px

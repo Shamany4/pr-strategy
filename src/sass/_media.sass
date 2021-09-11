@@ -429,61 +429,71 @@
     &__section
       height: auto
       padding-bottom: 50px
-    &__content, &-info, &-controls__btn, &-social
+    &__figure, &__questionnaire
       display: none
-  .m-person
-    height: 100%
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
     &__content
-      margin-top: 40px
-      display: block
-      position: relative
-    &-button
-      &__prev, &__next
-        position: absolute
-        top: calc(50% - 23px)
-        z-index: 2
-      &__prev
-        left: 5px
-      &__next
-        right: 5px
-    &__insta
-      background: none
-      border: none
-      font-size: 25px
-      +bold()
-      margin-top: 25px
-      color: $gray
-      &:hover
-        cursor: pointer
-    &__name
-      font-size: 40px
-      +bold()
-      margin-top: 25px
-    &__post, &__desc
-      font-size: 20px
-      line-height: 24px
-    &__desc
-      width: 70%
-      margin-top: 30px
-      text-align: center
-    &-social
-      display: flex
-      justify-content: center
       align-items: center
-      &-list
-        margin: 50px 0 0 0
-        display: flex
-      &__link
-        &:hover
-          cursor: pointer
+    &-info
+      padding-left: 0
+    &-column
+      &_one, &_three
+        width: 50%
+        align-items: center
+    &-desc
+      margin-top: 30px
+      width: 250px
+      transition: none
+      &__span
+        transition: none
+        &::after
+          display: none
+      &__text
+        margin-top: 60px
+        transition: none
+    &__name
+      margin-top: 0
+      width: 250px
+      transition: none
+      &_igor
+        transition: none
+        &::after
+          display: none
+    &__link
+      &_igor
+        margin-left: 0
+    &__quote
+      text-align: center
+      transition: none
+      &_igor
+        transition: none
+        margin-left: 0
+        width: auto
+        br
+          display: none
+    &-footer
+      margin-top: 80px
+      width: 100%
+      align-items: center
+      justify-content: center
+    &-social
+      margin-right: 0
+      margin-bottom: 0
+    &-controls
+      &__btn
+        margin: 0 0 0 50px
+        &_active
           svg
-            stroke: url(#m-social-gradient)
-            fill: url(#m-social-gradient)
-  .m-instagram
+            transform: rotate(-90deg)
+            transition: 0.3s
+            margin-right: 3px
+        &_hide
+          display: block
+          margin: 0 50px 0 0
+          svg
+            transform: rotate(90deg)
+            transition: 0.3s
+            margin-right: 5px
+  .instagram
     margin-top: 0
   .portfolio
     &__title
@@ -669,9 +679,16 @@
       &_circle
         left: calc(50% - 23px)
         top: 70px
-  .m-person
-    &__name, &__post, &__desc
-      text-align: center
+  .person
+    &__name
+      font-size: 40px
+      margin-top: 0
+    &__span
+      font-size: 18px
+    &-desc
+      margin-top: 10px
+      &__text
+        margin-top: 40px
   .portfolio
     &__title
       font-size: 80px
@@ -763,16 +780,36 @@
       left: calc(50% - 40.5px)
     &-container
       min-width: 100%
-  .m-person
+  .person
     &__content
-      padding: 0
+      flex-direction: column
+    &-column
+      &_one, &_three
+        width: 100%
+        text-align: center
+      &_three
+        order: -1
+      &_one
+        margin-top: 30px
     &__name
-      font-size: 30px
-    &__desc
-      width: 90%
-      font-size: 18px
-    &__post
-      width: 90%
+      width: 80%
+      br
+        display: none
+    &-desc
+      width: 80%
+      text-align: center
+      &__span
+        justify-content: center
+    &-controls
+      &__btn
+        height: 50px
+        width: 50px
+        margin: 0 0 0 30px
+        svg
+          height: 13px
+          width: 13px
+        &_hide
+          margin: 0 30px 0 0
   .stage
     &__section
       padding-top: 170px
@@ -952,16 +989,25 @@
     &-consultation
       &__title
         font-size: 18px
-  .m-person
-    &__insta
-      font-size: 20px
+  .person
     &__name
+      font-size: 35px
+    &-desc
       width: 90%
-      text-align: center
-    &__post
-      width: 200px
-    &__desc
-      width: 85%
+      &__span
+        font-size: 18px
+      &__text
+        font-size: 16px
+    &-footer
+      justify-content: space-around
+    &-controls
+      &__btn
+        background: transparent
+        margin: 0
+  .portfolio
+    &-info
+      &__text
+        font-size: 16px
   .player
     &-widget
       width: 90%
@@ -1023,13 +1069,12 @@
       top: -76px
       right: 38px
       width: 50%
+  .footer
+    &__text
+      font-size: 16px
   .swiper-pagination-bullets
     width: 180px
 @media screen and (max-width: 351px)
   .stage
     &__section
       padding-bottom: 600px
-@media screen and (max-width: 341px)
-  .person
-    &__section
-      height: 720px
