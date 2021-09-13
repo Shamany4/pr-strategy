@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pr-strategy/static/css/main.02a5c5a1.chunk.css",
-    "main.js": "/pr-strategy/static/js/main.e232cfcc.chunk.js",
-    "main.js.map": "/pr-strategy/static/js/main.e232cfcc.chunk.js.map",
+    "main.js": "/pr-strategy/static/js/main.d3465877.chunk.js",
+    "main.js.map": "/pr-strategy/static/js/main.d3465877.chunk.js.map",
     "runtime-main.js": "/pr-strategy/static/js/runtime-main.206efd28.js",
     "runtime-main.js.map": "/pr-strategy/static/js/runtime-main.206efd28.js.map",
     "static/css/2.a0a1c007.chunk.css": "/pr-strategy/static/css/2.a0a1c007.chunk.css",
@@ -35,13 +35,13 @@
     "static/media/photo_1.5b0584d9.webp": "/pr-strategy/static/media/photo_1.5b0584d9.webp",
     "static/media/photo_2.c185be8a.webp": "/pr-strategy/static/media/photo_2.c185be8a.webp",
     "static/media/portfolio-bg.494ce56a.webp": "/pr-strategy/static/media/portfolio-bg.494ce56a.webp",
-    "static/media/preview_1.webp": "/pr-strategy/static/media/preview_1.ee43d657.webp",
+    "static/media/preview_1.webp": "/pr-strategy/static/media/preview_1.d3d32864.webp",
     "static/media/preview_2.webp": "/pr-strategy/static/media/preview_2.42b8d8c3.webp",
-    "static/media/preview_3.webp": "/pr-strategy/static/media/preview_3.a6fe7b32.webp",
+    "static/media/preview_3.webp": "/pr-strategy/static/media/preview_3.c12549ff.webp",
     "static/media/preview_4.webp": "/pr-strategy/static/media/preview_4.dd5e4956.webp",
-    "static/media/preview_5.webp": "/pr-strategy/static/media/preview_5.40cb3324.webp",
+    "static/media/preview_5.webp": "/pr-strategy/static/media/preview_5.94f07133.webp",
     "static/media/preview_6.webp": "/pr-strategy/static/media/preview_6.2328df69.webp",
-    "static/media/preview_7.webp": "/pr-strategy/static/media/preview_7.1edaa75f.webp",
+    "static/media/preview_7.webp": "/pr-strategy/static/media/preview_7.e0da7c8d.webp",
     "static/media/smile.032c64cf.svg": "/pr-strategy/static/media/smile.032c64cf.svg",
     "static/media/sound_1.mp3": "/pr-strategy/static/media/sound_1.358cbade.mp3",
     "static/media/sound_2.mp3": "/pr-strategy/static/media/sound_2.5509f161.mp3",
@@ -57,6 +57,6 @@
     "static/css/2.a0a1c007.chunk.css",
     "static/js/2.342c19e8.chunk.js",
     "static/css/main.02a5c5a1.chunk.css",
-    "static/js/main.e232cfcc.chunk.js"
+    "static/js/main.d3465877.chunk.js"
   ]
 }
