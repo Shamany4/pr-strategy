@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/pr-strategy/static/css/main.0394e689.chunk.css",
-    "main.js": "/pr-strategy/static/js/main.8e39d208.chunk.js",
-    "main.js.map": "/pr-strategy/static/js/main.8e39d208.chunk.js.map",
+    "main.css": "/pr-strategy/static/css/main.1e4c1232.chunk.css",
+    "main.js": "/pr-strategy/static/js/main.5420506f.chunk.js",
+    "main.js.map": "/pr-strategy/static/js/main.5420506f.chunk.js.map",
     "runtime-main.js": "/pr-strategy/static/js/runtime-main.206efd28.js",
     "runtime-main.js.map": "/pr-strategy/static/js/runtime-main.206efd28.js.map",
     "static/css/2.a0a1c007.chunk.css": "/pr-strategy/static/css/2.a0a1c007.chunk.css",
-    "static/js/2.342c19e8.chunk.js": "/pr-strategy/static/js/2.342c19e8.chunk.js",
-    "static/js/2.342c19e8.chunk.js.map": "/pr-strategy/static/js/2.342c19e8.chunk.js.map",
+    "static/js/2.3e8b0d4c.chunk.js": "/pr-strategy/static/js/2.3e8b0d4c.chunk.js",
+    "static/js/2.3e8b0d4c.chunk.js.map": "/pr-strategy/static/js/2.3e8b0d4c.chunk.js.map",
     "static/js/3.4ba1ce59.chunk.js": "/pr-strategy/static/js/3.4ba1ce59.chunk.js",
     "static/js/3.4ba1ce59.chunk.js.map": "/pr-strategy/static/js/3.4ba1ce59.chunk.js.map",
     "index.html": "/pr-strategy/index.html",
     "static/css/2.a0a1c007.chunk.css.map": "/pr-strategy/static/css/2.a0a1c007.chunk.css.map",
-    "static/css/main.0394e689.chunk.css.map": "/pr-strategy/static/css/main.0394e689.chunk.css.map",
-    "static/js/2.342c19e8.chunk.js.LICENSE.txt": "/pr-strategy/static/js/2.342c19e8.chunk.js.LICENSE.txt",
+    "static/css/main.1e4c1232.chunk.css.map": "/pr-strategy/static/css/main.1e4c1232.chunk.css.map",
+    "static/js/2.3e8b0d4c.chunk.js.LICENSE.txt": "/pr-strategy/static/js/2.3e8b0d4c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pr-strategy/static/media/Futura-PT-Heavy.c957cf0d.ttf",
     "static/media/businnes.28814815.webp": "/pr-strategy/static/media/businnes.28814815.webp",
     "static/media/calendar.0108f960.svg": "/pr-strategy/static/media/calendar.0108f960.svg",
@@ -36,7 +36,7 @@
     "static/media/photo_2.c185be8a.webp": "/pr-strategy/static/media/photo_2.c185be8a.webp",
     "static/media/portfolio-bg.494ce56a.webp": "/pr-strategy/static/media/portfolio-bg.494ce56a.webp",
     "static/media/preview_1.webp": "/pr-strategy/static/media/preview_1.d3d32864.webp",
-    "static/media/preview_2.webp": "/pr-strategy/static/media/preview_2.42b8d8c3.webp",
+    "static/media/preview_2.webp": "/pr-strategy/static/media/preview_2.2a3d4d1a.webp",
     "static/media/preview_3.webp": "/pr-strategy/static/media/preview_3.c12549ff.webp",
     "static/media/preview_4.webp": "/pr-strategy/static/media/preview_4.dd5e4956.webp",
     "static/media/preview_5.webp": "/pr-strategy/static/media/preview_5.94f07133.webp",
@@ -55,8 +55,8 @@
   "entrypoints": [
     "static/js/runtime-main.206efd28.js",
     "static/css/2.a0a1c007.chunk.css",
-    "static/js/2.342c19e8.chunk.js",
-    "static/css/main.0394e689.chunk.css",
-    "static/js/main.8e39d208.chunk.js"
+    "static/js/2.3e8b0d4c.chunk.js",
+    "static/css/main.1e4c1232.chunk.css",
+    "static/js/main.5420506f.chunk.js"
   ]
 }
