@@ -111,7 +111,9 @@ const PersonSection = () => {
             <div className="instagram">
               <div className={active ? 'instagram-photo instagram-photo_active' : 'instagram-photo'}>
               </div>
-              <div className="instagram-icons">
+              <button className="instagram-icons"
+                   onClick={() => {openUrlHandler(!active ? 'https://www.instagram.com/igormalinin.ru/' : 'https://www.instagram.com/julinn_ita/')}}
+              >
                 <svg viewBox="0 0 27.83 27.83">
                   <g>
                     <g>
@@ -121,7 +123,7 @@ const PersonSection = () => {
                     </g>
                   </g>
                 </svg>
-              </div>
+              </button>
               <svg height="260" width="260" id="instagram">
                 <linearGradient id="instagram-gradient">
                   <stop offset="0%" stopColor="#FF6E65" />

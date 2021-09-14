@@ -10,7 +10,6 @@ const HomeSection = () => {
     <section className="home home__section">
       <Follow bottom={60} right={5 + '%'} />
       <div className="container home-block">
-        <AudioPlayer />
         <h1 className="section-title home__title">Получите работающую PR-стратегию</h1>
         <h1 className="section-title  home__title m-home__title">Получите работающую <br/> PR-стратегию</h1>
         <div className="d-flex align-start home__content">
@@ -61,7 +60,9 @@ const HomeSection = () => {
                   duration={1500}
             >уже сейчас</Link>
           </div>
+          <AudioPlayer mobile={false}/>
         </div>
+        <AudioPlayer mobile={true}/>
       </div>
     </section>
   )

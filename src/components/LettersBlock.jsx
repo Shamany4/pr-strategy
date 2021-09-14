@@ -1,27 +1,23 @@
-import React, {useState} from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import React  from 'react';
 
-const LettersBlock = ({path}) => {
-  const [isOpen, setIsOpen] = useState(false);
+const LettersBlock = ({ path, changeOpen, index, changeIndex }) => {
+
+
   const getUrlImage = () => {
     return require('../assets/letters/' + path);
   }
+
+
   return (
     <div className="letters-block">
-      <div className="letters-photo" onClick={() => setIsOpen(true)}>
+      <div className="letters-photo"
+           onClick={() => {
+             changeOpen();
+             changeIndex(index);
+           }}
+      >
         <img src={getUrlImage().default} alt="Письмо благодарности" className="letters__img" />
       </div>
-      {
-        isOpen
-          ?
-          <Lightbox
-            mainSrc={getUrlImage().default}
-            onCloseRequest={() => setIsOpen(false)}
-          />
-          :
-          null
-      }
     </div>
   )
 }

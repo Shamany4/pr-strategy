@@ -105,7 +105,6 @@ body
     width: 100%
     position: relative
   &-block
-    position: relative
     display: flex
     flex-direction: column
   &__title
@@ -113,6 +112,9 @@ body
     margin-left: -12px
     margin-bottom: 45px
     animation: translate 10s infinite linear
+  &__content
+    height: 220px
+    position: relative
 .m-home
   &__title
     display: none
@@ -122,64 +124,17 @@ body
   100%
     transform: translateX(-120%)
 // Audio player component
-iframe
+.m-iframe
+  display: none
+.iframe
+  display: block
   position: absolute
-  bottom: 100px
+  bottom: 0
   right: 0
   z-index: 2
   border-radius: 20px
-  height: 294px
+  height: 395px
   width: 294px
-.audio-player
-  position: absolute
-  bottom: 146px
-  right: 9px
-  height: 448px
-  width: 448px
-  box-shadow: 10px 10px 15px rgba($gray, 0.2)
-  z-index: 2
-  background-color: $white
-  border-radius: 50%
-  &-wrapper
-    position: absolute
-    top: 0
-    left: 0
-    height: 100%
-    width: 100%
-    z-index: 2
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-  &__svg
-    position: absolute
-    top: calc(50% - 224px)
-    left: calc(50% - 224px)
-  &__time
-    font-size: 68px
-    +bold()
-    color: $black
-  &-image
-    height: 63px
-    width: 63px
-    border-radius: 50%
-    position: relative
-    margin-top: 40px
-    &__preview
-      position: absolute
-      top: 0
-      left: 0
-      height: 100%
-      width: 100%
-      border-radius: 50%
-      object-fit: cover
-  &__artist
-    font-size: 20px
-    +bold()
-  &__name
-    font-size: 16px
-    +book()
-    margin-bottom: 30px
 .block
   position: absolute
   top: 0
@@ -267,9 +222,13 @@ iframe
   +book()
   line-height: 24px
 .dividends
+  height: 100%
   &__content
     margin-left: 160px
     margin-top: 7px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   &-block
     display: flex
     align-items: center
@@ -283,7 +242,6 @@ iframe
   &__text
     width: 140px
   &__link
-    margin-top: 37px
     width: 187px
     height: 60px
     display: flex
@@ -978,6 +936,9 @@ iframe
     justify-content: center
     align-items: center
     z-index: 2
+    border: none
+    &:hover
+      cursor: pointer
     svg
       width: 27px
       height: 27px
@@ -1076,6 +1037,7 @@ iframe
       top: calc(50% - 160.5px)
       left: calc(50% - 160.5px)
       border-radius: 50%
+      overflow: hidden
       &__image
         position: absolute
         top: 0
@@ -1447,14 +1409,18 @@ iframe
     z-index: 2
     &:hover
       cursor: pointer
+  &-social
+    margin-top: 15px
   &__span
     background: none
+    display: block
     border: none
     color: rgba($gray, 0.7)
     +bold()
-    margin-top: 15px
     &:hover
       cursor: pointer
+    &:first-child
+      margin-bottom: 2px
 // Footer section
 .footer
   &__section

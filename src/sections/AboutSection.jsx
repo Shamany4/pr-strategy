@@ -15,7 +15,7 @@ const AboutSection = () => {
                className="about__image"
                data-aos="fade-right"
                onClick={() => {
-                 window.open('https://www.instagram.com/');
+                 window.open('https://www.instagram.com/tbp.agency/');
                }}
           />
           <div className="d-flex flex-column about__content">

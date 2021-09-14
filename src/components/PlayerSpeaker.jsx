@@ -18,7 +18,10 @@ const PlayerSpeaker = ({ useRef, useRef_2, current, isPlay, setPlay, isReady, pl
   return (
     <div className="player-speaker" data-aos="fade-up">
       <div className="player-speaker-preview">
-        <img src={getUrlImage().default} alt="Изображение обложки" className="player-speaker-preview__image" />
+        <img src={getUrlImage().default}
+             alt="Изображение обложки"
+             className="player-speaker-preview__image"
+        />
       </div>
       <div className="player-speaker-controls">
         <svg height="87" width="87">

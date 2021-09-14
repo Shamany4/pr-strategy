@@ -224,6 +224,7 @@ const PortfolioSection = () => {
               nextFunc={nextAudio}
               prevFunc={prevAudio}
               stopFunc={stopAudio}
+              playFunc={playAudio}
               endPlaylist={endPlaylist}
               isReady={isReady}
             />

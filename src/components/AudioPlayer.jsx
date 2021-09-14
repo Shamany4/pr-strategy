@@ -1,10 +1,11 @@
 import React from 'react';
 
-const AudioPlayer = () => {
+const AudioPlayer = ({ mobile }) => {
   return (
     <iframe frameBorder="0"
             style={{ border: 'none' }}
             title="The Business Pill"
+            className={mobile ? 'm-iframe' : 'iframe'}
             src="https://music.yandex.ru/iframe/#playlist/im@follow-up.su/1000"
     >Слушайте
       <a

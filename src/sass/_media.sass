@@ -6,11 +6,14 @@
       width: 100%
       padding-left: 50px
 @media screen and (max-width: 1370px)
-  iframe
-    margin-top: 50px
+  .iframe
+    display: none
+  .m-iframe
+    display: block
+    margin-top: 100px
+    border-radius: 20px
     width: 100%
-    position: static
-    order: 2
+    height: 305px
   .m-follow
     bottom: 60% !important
 @media screen and (max-width: 1245px)
@@ -742,8 +745,7 @@
       width: 200px
       height: 200px
 @media screen and (max-width: 627px)
-  iframe
-    width: 100%
+  .m-iframe
     height: 500px
   .player
     &-speaker
@@ -756,7 +758,7 @@
   .swiper
     &-container
       height: 650px
-  iframe
+  .m-iframe
     display: none
   .calendar
     &-widget

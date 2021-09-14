@@ -1,16 +1,49 @@
-import { React, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper.scss';
-
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 import LettersBlock from '../components/LettersBlock';
 import ArrowCircle from "../components/ArrowCircle";
 
+let swiper;
+
 const LettersSection = () => {
+  const lettersArray = [
+    "letters_1.webp",
+    "letters_2.webp",
+    "letters_3.webp",
+    "letters_4.webp",
+    "letters_5.webp",
+    "letters_6.webp",
+    "letters_7.webp",
+    "letters_8.webp",
+    "letters_9.webp",
+    "letters_10.webp",
+    "letters_11.webp",
+    "letters_12.webp",
+    "letters_13.webp"
+  ];
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const changeStateOpen = () => {
+    setIsOpen(!isOpen);
+  }
+  // button_2Savo sizeS_2yB0V play_29jUQ
+  const changeCurrentIndex = (index) => {
+    setCurrentIndex(index);
+    swiper.slideTo(swiper.clickedIndex);
+  }
+
+  const getUrlImage = () => {
+    return require('../assets/letters/' + lettersArray[currentIndex]);
+  }
+
   useEffect(() => {
-    new Swiper('.letters-container', {
+    swiper = new Swiper('.letters-container', {
       direction: 'horizontal',
-      slidesPerView: 6,
       spaceBetween: 25,
       loop: true,
       // Navigation arrows
@@ -69,24 +102,24 @@ const LettersSection = () => {
       }
     });
   }, []);
+
   return (
     <section className="letters letters__section">
       <div className="letters__content">
         <div className="letters-container">
           <div className="swiper-wrapper">
-            <div className="swiper-slide"><LettersBlock path="letters_1.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_2.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_3.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_4.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_5.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_6.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_7.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_8.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_9.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_10.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_11.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_12.webp"/></div>
-            <div className="swiper-slide"><LettersBlock path="letters_13.webp"/></div>
+            {
+              lettersArray.map((el, key) => {
+                return <div className="swiper-slide" key={key}>
+                  <LettersBlock
+                    path={el}
+                    changeOpen={changeStateOpen}
+                    changeIndex={changeCurrentIndex}
+                    index={key}
+                  />
+                </div>
+              })
+            }
           </div>
           <div className="letters-controls">
             <ArrowCircle
@@ -115,6 +148,34 @@ const LettersSection = () => {
           </div>
         </div>
       </div>
+      {
+        isOpen
+          ?
+          <Lightbox
+            mainSrc={getUrlImage().default}
+            nextSrc={getUrlImage().default}
+            prevSrc={getUrlImage().default}
+            onMovePrevRequest={() => {
+              if (currentIndex === 0) {
+                setCurrentIndex(lettersArray.length - 1);
+              } else {
+                setCurrentIndex(currentIndex - 1);
+              }
+              swiper.slidePrev(0);
+            }}
+            onMoveNextRequest={() => {
+              if (currentIndex === lettersArray.length - 1) {
+                setCurrentIndex(0);
+              } else {
+                setCurrentIndex(currentIndex + 1);
+              }
+              swiper.slideNext(0);
+            }}
+            onCloseRequest={() => setIsOpen(false)}
+          />
+          :
+          null
+      }
     </section>
   )
 }
