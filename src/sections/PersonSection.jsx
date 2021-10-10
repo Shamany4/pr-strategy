@@ -78,7 +78,7 @@ const PersonSection = () => {
             <div className={!active ? 'person-desc person-desc_igor' : 'person-desc person-desc_active'}>
               <span className={!active ? 'person-desc__span person-desc__span_igor' : 'person-desc__span'}>
                 {
-                  !active ? 'Руководитель холдинга The Business Pill.' : 'PR-стратег'
+                  !active ? 'Руководитель холдинга The Business Pill.' : 'PR-партнёр'
                 }
               </span>
               {
@@ -93,9 +93,7 @@ const PersonSection = () => {
                   </p>
                   :
                   <p className="person-desc__text person-desc__text_active">
-                    C&nbsp;экспертизой
-                    в&nbsp;медиапланировании
-                    и&nbsp;аудите более 15&nbsp;лет.
+                    С&nbsp;экспертизой в&nbsp;аудите компаний и&nbsp;коммуникаций более 15&nbsp;лет.
                   </p>
               }
             </div>
@@ -112,7 +110,7 @@ const PersonSection = () => {
               <div className={active ? 'instagram-photo instagram-photo_active' : 'instagram-photo'}>
               </div>
               <button className="instagram-icons"
-                   onClick={() => {openUrlHandler(!active ? 'https://www.instagram.com/igormalinin.ru/' : 'https://www.instagram.com/julinn_ita/')}}
+                onClick={() => { openUrlHandler(!active ? 'https://www.instagram.com/igormalinin.ru/' : 'https://www.instagram.com/julinn_ita/') }}
               >
                 <svg viewBox="0 0 27.83 27.83">
                   <g>
